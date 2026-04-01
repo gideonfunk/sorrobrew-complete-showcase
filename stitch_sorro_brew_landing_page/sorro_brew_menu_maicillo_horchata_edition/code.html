@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#3e2723",
+              "outline": "#827472",
+              "tertiary-fixed-dim": "#e4beb2",
+              "surface-variant": "#e6e5b9",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#e9c349",
+              "primary": "#271310",
+              "inverse-on-surface": "#f5f3c7",
+              "secondary-container": "#fed65b",
+              "inverse-surface": "#323214",
+              "primary-fixed-dim": "#e3beb8",
+              "on-tertiary-fixed-variant": "#5b4137",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#27130b",
+              "tertiary-fixed": "#ffdbce",
+              "tertiary-container": "#3e271e",
+              "outline-variant": "#d3c3c0",
+              "surface-tint": "#745853",
+              "on-tertiary-container": "#ae8d81",
+              "surface-container-highest": "#e6e5b9",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#2b160f",
+              "on-surface": "#1d1d03",
+              "on-primary-fixed-variant": "#5b403c",
+              "on-error": "#ffffff",
+              "surface-bright": "#fefccf",
+              "primary-fixed": "#ffdad4",
+              "on-background": "#1d1d03",
+              "surface-dim": "#dedcb1",
+              "surface": "#fefccf",
+              "on-primary-container": "#ae8d87",
+              "on-primary-fixed": "#2b1613",
+              "on-surface-variant": "#504442",
+              "on-error-container": "#93000a",
+              "secondary": "#735c00",
+              "secondary-fixed": "#ffe088",
+              "on-secondary-container": "#745c00",
+              "inverse-primary": "#e3beb8",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#241a00",
+              "on-secondary": "#ffffff",
+              "surface-container-high": "#eceabe",
+              "on-secondary-fixed-variant": "#574500",
+              "surface-container-low": "#f8f6c9",
+              "surface-container": "#f2f0c4",
+              "background": "#fefccf",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-asymmetry {
+            margin-left: clamp(2rem, 5vw, 8rem);
+        }
+        .glass-order-bar {
+            background: rgba(254, 252, 207, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-primary selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#fefccf] dark:bg-[#1d1d03]">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-[#271310] dark:text-[#fefccf] uppercase tracking-tighter font-headline">
+            Sorro Brew
+        </div>
+<nav class="hidden md:flex items-center space-x-10">
+<a class="font-headline font-bold tracking-tight text-[#3e2723] opacity-80 hover:text-[#735c00] transition-colors duration-300" href="#">Heritage</a>
+<a class="font-headline font-bold tracking-tight text-[#735c00] border-b-2 border-[#735c00] pb-1 hover:text-[#735c00] transition-colors duration-300" href="#">Menu</a>
+<a class="font-headline font-bold tracking-tight text-[#3e2723] opacity-80 hover:text-[#735c00] transition-colors duration-300" href="#">Rituals</a>
+<a class="font-headline font-bold tracking-tight text-[#3e2723] opacity-80 hover:text-[#735c00] transition-colors duration-300" href="#">Find Us</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-[#271310] dark:text-[#fefccf] hover:scale-95 duration-200">shopping_bag</button>
+<button class="material-symbols-outlined text-[#271310] dark:text-[#fefccf] hover:scale-95 duration-200">person</button>
+</div>
+</div>
+<div class="bg-[#e6e5b9] dark:bg-[#271310] h-[1px] w-full opacity-20"></div>
+</header>
+<main class="pt-28 pb-20">
+<!-- Hero Section: The Espresso Ritual -->
+<section class="relative min-h-[716px] flex items-center overflow-hidden mb-24">
+<div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 z-10">
+<span class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container text-[0.7rem] font-headline font-bold tracking-[0.2em] uppercase rounded-full mb-6">Experience Heritage</span>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold text-primary leading-[0.9] tracking-tighter mb-8">
+                    The <span class="text-secondary italic">Espresso</span> <br/>Ritual
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-md leading-relaxed mb-10">
+                    A curated collection of ancestral flavors met with modern preparation. Every cup is a tribute to Salvadoran maicillo traditions.
+                </p>
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 bg-secondary text-on-secondary font-headline font-bold text-sm tracking-wide rounded-md hover:bg-primary-container transition-all duration-300 shadow-xl shadow-secondary/10">Explore Menu</button>
+<button class="text-primary font-headline font-bold text-sm border-b-2 border-secondary-container pb-1">Our Process</button>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-surface-container-highest rounded-full opacity-50 blur-3xl"></div>
+<div class="relative z-0">
+<img alt="Artisan coffee preparation" class="w-full aspect-[4/5] object-cover rounded-sm shadow-2xl" data-alt="Close-up of a professional barista pouring steamed milk into a dark espresso base, creating intricate latte art in a ceramic cup, warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuConSPUTBPAnjahdvGeYgRA4U8PKb-XFIrm8ZlHHlxhjg8GSDzfQ_7U4JGKyoj_fzIhqWL2Sf1SpGSTAUrhcKSdHec_tGVFCMBzpuNAbPf_lFxqYcieLUM061uQVHFeinwD5dghynqHklKZk7leukoudoWE6TdHauOmmePzi6K7ybcTsbmClI8RxBquahyvdm01ujO22NJcn5z8jmwRXWuoVtz7LF2_Aom0pfjSB-2yfudI4XUUB_GmEoKcfbhSQ2DFFXxnnALVRS4"/>
+<!-- Heritage Badge -->
+<div class="absolute -bottom-6 -left-6 bg-secondary-container text-on-secondary-container w-32 h-32 rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl rotate-12">
+<span class="text-[0.6rem] font-headline font-black uppercase tracking-widest leading-none mb-1">Direct</span>
+<span class="text-lg font-headline font-black leading-none">TRADE</span>
+<span class="text-[0.6rem] font-headline font-medium opacity-80 mt-1">El Salvador</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Highlight: Maicillo Horchata -->
+<section class="container mx-auto px-8 mb-32 lg:pr-[28rem]">
+<div class="bg-primary-container text-surface rounded-sm overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+<div class="lg:w-1/2 relative">
+<img alt="Maicillo Horchata" class="w-full h-full object-cover min-h-[400px]" data-alt="A creamy, spiced horchata in a heavy, textured rustic glass, garnished with a cinnamon stick and star anise, sitting on a dark wooden table with soft side lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL94WaFF3EBtNlrCt7V7Ads-pwaNKrNdQNDy7rGBQEFZsjvRV1q_pP_PJvTMcx7Pm39ZDApd2i1X8cC9PPdNxd1L_Z5i9tHf_zX7-lkmDGmjkeJ_JiOg-B6CRIZc40k-8bboWx1UZ3_Fdfn3Ep-gFUVBK4vlMG9C_0FKvOt5dZl3dtv9hycB8x6tRkGyK3pw8Pg5AdCtA0IlYutzp_3l8zxeDsED3oS51yQMYmuWybUTNv278XSToIrPoKhCp95W95tHHG66DBzu0"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-secondary text-on-secondary text-[0.6rem] font-headline font-black uppercase tracking-[0.2em] rounded-sm shadow-lg">Signature Ritual</span>
+</div>
+</div>
+<div class="lg:w-1/2 p-12 flex flex-col justify-center">
+<h2 class="text-4xl font-headline font-extrabold mb-4 text-secondary-fixed">Maicillo Horchata</h2>
+<div class="flex items-center gap-2 mb-6 text-secondary-fixed-dim">
+<span class="material-symbols-outlined text-sm">stars</span>
+<span class="text-xs font-headline font-bold uppercase tracking-widest">Premium Cultural Fusion</span>
+</div>
+<p class="text-tertiary-fixed-dim leading-relaxed mb-8 text-lg">
+                    A celestial blend of roasted maicillo base and the soul of Salvadoran horchata. Infused with hand-ground cinnamon, Madagascar vanilla, and a hint of fresh nutmeg for a creamy, spiced ritual that transcends time.
+                </p>
+<div class="flex items-center justify-between">
+<span class="text-3xl font-headline font-extrabold text-secondary-fixed">$8.50</span>
+<button class="px-8 py-3 bg-secondary-container text-on-secondary-container font-headline font-bold text-xs uppercase tracking-widest hover:bg-secondary transition-colors duration-300 rounded-sm">
+                        Add to Ritual
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Section -->
+<section class="container mx-auto px-8 mb-32 lg:pr-[28rem]">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="text-4xl font-headline font-bold text-primary tracking-tight mb-4">Ancestral Variations</h2>
+<p class="text-on-surface-variant">Carefully balanced formulas using our signature maicillo-roasted Sorro base, designed for deep flavor profiles and wellness.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full flex items-center justify-center border border-outline-variant/30 text-primary">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button class="w-12 h-12 rounded-full flex items-center justify-center bg-primary text-on-primary">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Item 1: Sorro Flat White -->
+<div class="flex flex-col group">
+<div class="relative overflow-hidden mb-6 aspect-[3/4]">
+<img alt="Flat White" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-700" data-alt="A small ceramic cup of flat white coffee with smooth microfoam art on top, resting on a textured stone surface with warm sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT59bUdM0LFIPB80R8fR9SxCgHmrzqJl0ZnMb_Pjm4jkrIhU1b23RasI1H42hbsGmlcLNfQ7FVKkBMoy3FFXNMx-hug_vRSa1l9EJE7xSC6lGnEjHPeaS1gl4kzpSt2XaYl2463a3soj_vN74r5Rplwfk4H8tjW8gpUSZmVnw_NSA_-MKFe1-owkSvb8eTNOCesGsl12IOjaGiJ2z4wtb3MBtX3fzG8jHWPeWn9kXkIpTFMhs7yfJ6k91pmOls4zDfl8jtXpkQ2dM"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-headline font-bold text-primary">Sorro Flat White</h3>
+<span class="text-secondary font-headline font-bold">$5.50</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 flex-grow">
+                    Velvety microfoam over a rich Sorro Brew base. The ultimate balance of texture and depth.
+                </p>
+<button class="w-full py-3 border border-outline-variant/20 font-headline font-bold text-xs uppercase tracking-widest text-primary hover:bg-secondary-container hover:border-secondary-container transition-colors duration-300">
+                    Add to Order
+                </button>
+</div>
+<!-- Item 2: Sorro Latte -->
+<div class="flex flex-col group">
+<div class="relative overflow-hidden mb-6 aspect-[3/4]">
+<img alt="Latte" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-700" data-alt="A tall glass of layered coffee latte with creamy milk at the bottom and dark coffee at the top, soft morning light in a modern kitchen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDalHt0Mf-ERP-ClZSugoOXc-XH7_VwOKdG8QOx9AWRbBMwQKayCrDKBt3lOwDJ6rOF7iQWD_3y3VNkiwocqq46R2lMW-RXvAJ1lRXTZVS2KQPiin4VbInrL7ouzRrHUSZWKdyqwGAgFh7WoC1hI13vgbSgLl6T2VrHrrnXANjkNWhDarnUjzHxAHQL_fPIEGNNfZ-CodnEqrZvpVR4jUFTNgvS81z0ocLLcrxpQgXrF2rr3j1Nm4tbopeq3haRq0cAr_epTBDSI8c"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-headline font-bold text-primary">Sorro Latte</h3>
+<span class="text-secondary font-headline font-bold">$6.25</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 flex-grow">
+                    A classic, creamy reimagining with heritage maicillo notes and locally sourced milk.
+                </p>
+<button class="w-full py-3 border border-outline-variant/20 font-headline font-bold text-xs uppercase tracking-widest text-primary hover:bg-secondary-container hover:border-secondary-container transition-colors duration-300">
+                    Add to Order
+                </button>
+</div>
+<!-- Item 3: Ancestral Cortado -->
+<div class="flex flex-col group">
+<div class="relative overflow-hidden mb-6 aspect-[3/4]">
+<img alt="Cortado" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-700" data-alt="A small glass of cortado coffee showing equal layers of espresso and milk, set on a dark wood table with a gold spoon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsYV2EGkJ5-kNraBmE4Cmpv0junT7h-MI9sfa61mDaWq9sG4XvtOhSY7C36sFMiky6PacHpn7hsAQ5YZdCO_Cw-luzxh310MqP8JW5UoCfMHgy3HQ-8CyoHCz5yLQ5RYIvmoJXHDSSlWhG_a67dI-zd0TSEPKOssldz_o5ZRhRHUhr7q6g1YGOx05xC5ZkEsykHxKicsqtxKbeAvxJOxWzj5YJ-Z6gBUE9J5T1G4CHWGSVYQ3YRZ8qI6vpeez81AF2xOAKFEsjl7o"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-headline font-bold text-primary">Ancestral Cortado</h3>
+<span class="text-secondary font-headline font-bold">$4.75</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 flex-grow">
+                    A 1:1 ratio of Sorro Brew and steamed milk for a bold punch that honors the bean.
+                </p>
+<button class="w-full py-3 border border-outline-variant/20 font-headline font-bold text-xs uppercase tracking-widest text-primary hover:bg-secondary-container hover:border-secondary-container transition-colors duration-300">
+                    Add to Order
+                </button>
+</div>
+</div>
+</section>
+<!-- Ritual Basket / Order Placement Drawer -->
+<aside class="fixed right-0 top-0 bottom-0 w-96 bg-surface-container-low border-l border-outline-variant/10 z-[60] transform translate-x-full lg:translate-x-0 transition-transform duration-500 shadow-2xl">
+<div class="h-full flex flex-col p-8">
+<div class="flex justify-between items-center mb-10">
+<h2 class="text-2xl font-headline font-bold text-primary">Ritual Basket</h2>
+<button class="lg:hidden material-symbols-outlined text-primary">close</button>
+</div>
+<div class="flex-grow overflow-y-auto space-y-8 pr-2">
+<!-- Basket Item: Signature Addition -->
+<div class="flex gap-4 p-3 bg-secondary-container/10 rounded-sm border border-secondary-container/20">
+<div class="w-16 h-16 bg-surface-container-highest rounded-sm overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up of Maicillo Horchata." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXHQKbfFLITIq09cu_0fa1Cc0tWojm_39taOdXcqfO19z2tLjyqiNrtRORCH5sHtmQj0-tZjB-bmtTI6dGLFCso1Qm3FHjcBfC1VDunQbvmcIgGvcnOdzJ3G-FonNFNz_2S7e56KFLQsQmxqH5VNQphPZwxO9XVPX5PuFQyEH10n6K78jXaayhHBaFyUOwsJQDR_tE2gTG1LrKaoP9lYP6y06Bp4fT2J9o-M_qYErKRGZinM3mE2Epog80U8oH7-Nax8IgAq6SHW8"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-headline font-bold text-sm text-primary">Maicillo Horchata</h4>
+<span class="text-sm font-bold text-primary">$8.50</span>
+</div>
+<p class="text-[0.6rem] font-bold text-secondary uppercase tracking-widest mt-1">Signature Ritual</p>
+<div class="flex items-center gap-3 mt-3">
+<button class="w-6 h-6 rounded-full border border-outline-variant/30 flex items-center justify-center text-xs">-</button>
+<span class="text-xs font-bold">1</span>
+<button class="w-6 h-6 rounded-full border border-outline-variant/30 flex items-center justify-center text-xs">+</button>
+<button class="ml-auto text-[0.65rem] uppercase font-bold text-error tracking-tighter">Remove</button>
+</div>
+</div>
+</div>
+<!-- Existing Items -->
+<div class="flex gap-4">
+<div class="w-16 h-16 bg-surface-container-highest rounded-sm overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up of flat white coffee cup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOVSm5oMDtK-sjijxZdeCPS5Fn7P5X9FawOusNo-v5v91dfC4n1NhNnlrz9XXFk1gXNNYgL-ncE6b84RFh0gWpMMbgIBqxiiOVDKvryOANQh-p7yCPhX8qtQNkFde6i7b4ZLPeU0RzJBAjt4VMy7E_LcBq50wXluLLp2Uz6VXIFgKgBt3YF_AFxxBy35nWqCPXFbuvensNMLv2Ei1lFVXXcPEjF0jVItcp-31WjP5ykkJRtafzLRpCBOIbnJKaSn7wbL-3ByYDFcE"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-headline font-bold text-sm text-primary">Sorro Flat White</h4>
+<span class="text-sm font-bold text-primary">$5.50</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">Oat Milk, Extra Shot</p>
+<div class="flex items-center gap-3 mt-3">
+<button class="w-6 h-6 rounded-full border border-outline-variant/30 flex items-center justify-center text-xs">-</button>
+<span class="text-xs font-bold">1</span>
+<button class="w-6 h-6 rounded-full border border-outline-variant/30 flex items-center justify-center text-xs">+</button>
+<button class="ml-auto text-[0.65rem] uppercase font-bold text-error tracking-tighter">Remove</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/20">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-on-surface-variant">Subtotal</span>
+<span class="text-sm font-bold text-primary">$14.00</span>
+</div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-sm text-on-surface-variant">Tax &amp; Service</span>
+<span class="text-sm font-bold text-primary">$2.10</span>
+</div>
+<div class="flex justify-between items-center mb-8">
+<span class="text-lg font-headline font-bold text-primary">Total Ritual</span>
+<span class="text-xl font-headline font-extrabold text-secondary">$16.10</span>
+</div>
+<button class="w-full py-5 bg-secondary text-on-secondary font-headline font-extrabold text-sm uppercase tracking-[0.2em] rounded-md hover:bg-primary transition-all duration-300 shadow-xl shadow-secondary/20">
+                    Complete Order
+                </button>
+<p class="text-center mt-4 text-[0.65rem] text-on-surface-variant font-medium">By completing, you accept our Ritual Guidelines.</p>
+</div>
+</div>
+</aside>
+<!-- Summary Section / Content Asymmetry -->
+<section class="container mx-auto px-8 lg:pr-[28rem]">
+<div class="bg-surface-container-highest p-12 rounded-sm flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2">
+<img class="w-full aspect-video object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Interior of a modern rustic cafe with warm wooden furniture, hanging plants, and soft moody lighting reflecting off cream walls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD_kk8pOAm1QLLVtixJLr-1M4aFTaSe0unBPWXzVK7GpIU3fMDK10nOuHlJArS33cKsJcOMJIGCXtLWRTOE63e1ZqlvW7YX7boYxN_uPEItJlVdLutS_Ql61BrNEeROkKNApggptr0yJTMHQKeC8dvc9w2T0H8HszHU9DZdSL_ZRPKHk1jZzs7YTJN4QWM-nvTSEtGeKkzCgrbPgd3RYcY0DWnLJvWi8OJ2Aem9aZNEXh0aMmeApDQyLlD0TIvIJ3pFAJE8XwWqNA"/>
+</div>
+<div class="md:w-1/2">
+<h3 class="text-3xl font-headline font-bold mb-6">Sustainable Brewing</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                    Our Sorro Brew is more than a beverage. It's an ecological restoration project. By using Maicillo, we reduce water consumption by 40% compared to traditional coffee farming.
+                </p>
+<a class="inline-flex items-center gap-3 font-headline font-bold text-secondary group" href="#">
+                    Learn about our impact
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-[#e6e5b9] dark:bg-[#271310] font-['Be_Vietnam_Pro'] text-sm leading-relaxed text-[#271310] dark:text-[#fefccf]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-[#3e2723] dark:text-[#fefccf] mb-2 uppercase tracking-tight">Sorro Brew</div>
+<p class="opacity-70 max-w-xs text-xs">Crafting heritage rituals through sustainable maicillo-based coffee alternatives from the heart of El Salvador.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+<a class="text-[#3e2723] opacity-70 hover:underline decoration-[#fed65b] decoration-2 underline-offset-4 duration-300" href="#">Sustainability</a>
+<a class="text-[#3e2723] opacity-70 hover:underline decoration-[#fed65b] decoration-2 underline-offset-4 duration-300" href="#">Wholesale</a>
+<a class="text-[#3e2723] opacity-70 hover:underline decoration-[#fed65b] decoration-2 underline-offset-4 duration-300" href="#">Privacy Policy</a>
+<a class="text-[#3e2723] opacity-70 hover:underline decoration-[#fed65b] decoration-2 underline-offset-4 duration-300" href="#">Terms</a>
+</div>
+<div class="text-right">
+<div class="flex gap-4 justify-center md:justify-end mb-4">
+<span class="material-symbols-outlined text-xl opacity-60">brand_awareness</span>
+<span class="material-symbols-outlined text-xl opacity-60">eco</span>
+<span class="material-symbols-outlined text-xl opacity-60">diversity_3</span>
+</div>
+<p class="text-[0.65rem] opacity-50 uppercase tracking-[0.1em]">© 2024 Sorro Brew. Salvadoran Heritage Rituals.</p>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation -->
+<div class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] glass-order-bar px-6 py-4 rounded-full shadow-2xl flex items-center gap-8 border border-outline-variant/10">
+<button class="material-symbols-outlined text-primary">home</button>
+<button class="material-symbols-outlined text-primary font-bold">restaurant_menu</button>
+<div class="w-[1px] h-6 bg-outline-variant/20"></div>
+<button class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="text-xs font-headline font-bold text-primary">3 Items</span>
+</button>
+</div>
+</body></html>

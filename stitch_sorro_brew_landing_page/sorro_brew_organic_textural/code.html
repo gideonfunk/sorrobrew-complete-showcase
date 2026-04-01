@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sorro Brew | Grounded in Earth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#261900",
+              "surface-container-highest": "#e7e2db",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e7e2db",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#f5f0e9",
+              "surface-tint": "#974730",
+              "on-background": "#1d1c17",
+              "on-tertiary-container": "#fffeff",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#ded9d3",
+              "on-primary-fixed-variant": "#78301b",
+              "surface-container": "#f2ede6",
+              "primary-fixed-dim": "#ffb5a0",
+              "inverse-primary": "#ffb5a0",
+              "tertiary-container": "#737864",
+              "on-primary": "#ffffff",
+              "on-surface-variant": "#55433e",
+              "on-tertiary-fixed-variant": "#444937",
+              "outline": "#88726d",
+              "outline-variant": "#dbc1ba",
+              "surface-container-low": "#f8f3ec",
+              "secondary": "#775a19",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#785a1a",
+              "surface": "#fef9f2",
+              "primary-fixed": "#ffdbd1",
+              "surface-bright": "#fef9f2",
+              "on-surface": "#1d1c17",
+              "tertiary-fixed": "#e0e5cc",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#191d0e",
+              "secondary-fixed": "#ffdea5",
+              "background": "#fef9f2",
+              "on-error": "#ffffff",
+              "tertiary": "#5a5f4c",
+              "on-primary-container": "#fffdff",
+              "primary-container": "#b35d44",
+              "secondary-fixed-dim": "#e9c176",
+              "surface-container-high": "#ece7e1",
+              "secondary-container": "#fed488",
+              "tertiary-fixed-dim": "#c4c9b1",
+              "primary": "#94452e",
+              "on-secondary-fixed-variant": "#5d4201",
+              "inverse-surface": "#32302c",
+              "on-primary-fixed": "#3b0900"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .organic-shape {
+            border-radius: 1.5rem 0.75rem 1.5rem 0.75rem;
+        }
+        .fired-clay-gradient {
+            background: linear-gradient(145deg, #94452e 0%, #b35d44 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fef9f2]/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<span class="text-2xl font-bold text-[#94452e] tracking-tighter font-headline">Sorro Brew</span>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-[#94452e] font-bold border-b-2 border-[#94452e] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Our Process</a>
+<a class="text-[#55433e] hover:text-[#94452e] transition-colors font-['Plus_Jakarta_Sans'] tracking-tight font-medium" href="#">The Ritual</a>
+<a class="text-[#55433e] hover:text-[#94452e] transition-colors font-['Plus_Jakarta_Sans'] tracking-tight font-medium" href="#">Shop Blend</a>
+<a class="text-[#55433e] hover:text-[#94452e] transition-colors font-['Plus_Jakarta_Sans'] tracking-tight font-medium" href="#">Journal</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-medium hover:scale-95 transition-all duration-300 fired-clay-gradient">
+                Join the Ritual
+            </button>
+</div>
+</nav>
+<main class="relative">
+<div class="absolute inset-0 grain-texture z-10"></div>
+<!-- Hero Section -->
+<section class="relative pt-44 pb-32 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-20">
+<span class="inline-block text-secondary font-bold tracking-widest label-md mb-6 px-4 py-1 bg-secondary-container/30 rounded-full">ESTABLISHED IN THE EARTH</span>
+<h1 class="text-6xl md:text-8xl font-extrabold text-on-background leading-[1.05] tracking-tighter font-headline mb-8">
+                        Break up with coffee, <br/>
+<span class="text-primary italic font-medium">not your morning</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        A morning ritual that respects your nervous system. Crafted from sun-dried cacao shells and medicinal roots for a grounded energy that lasts.
+                    </p>
+<div class="flex flex-wrap gap-6 items-center">
+<button class="fired-clay-gradient text-on-primary px-10 py-5 rounded-full text-lg font-bold shadow-xl shadow-primary/10 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300">
+                            Experience the Ritual
+                        </button>
+<button class="flex items-center gap-3 text-on-surface font-semibold hover:gap-5 transition-all duration-300">
+                            Explore the Blend
+                            <span class="material-symbols-outlined" data-icon="trending_flat">trending_flat</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl z-20">
+<img alt="Artisan ceramic mug with steaming dark brew on textured stone surface" class="w-full h-full object-cover" data-alt="Close-up of a rustic hand-thrown ceramic mug filled with dark herbal tea on a sunlit stone surface with soft morning shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJNt3g5T8yiSVTtCs-tTWaES8tQNEyye1_bjyksapj9mSYBpYzt3NTeSy1N0-pZrw9PLm-IlXXy84rjiqsicjLvn6oGDlfoYc3ZlJaRQMYb7HLxE0tsui6tIGw6jQQGIjP-G-kwHyISCqLRfUoNmlFZI33S1d9aaSd-aN8OepXiw_KAmnX0SyP0Zp94L_Z1CbqKRN6xU2azjBwe8EkpblETz7YDTFTXu4UQDsQwBEKzeXt53UlZ0KpUXFRYYk4mkq0k0vOheQ0gYs"/>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-tertiary-container/20 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-8 -left-8 w-full h-full bg-surface-container-high organic-shape -z-10 translate-x-4 translate-y-4"></div>
+</div>
+</div>
+</section>
+<!-- Benefits Grid -->
+<section class="py-24 bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex flex-col items-start gap-6">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary organic-shape">
+<span class="material-symbols-outlined text-4xl" data-icon="psychology">psychology</span>
+</div>
+<h3 class="text-2xl font-bold font-headline text-on-surface">Steady Cognition</h3>
+<p class="text-on-surface-variant leading-relaxed">No caffeine jitters or midday crashes. Just a focused, calm presence that supports your natural flow throughout the day.</p>
+</div>
+<div class="flex flex-col items-start gap-6">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary organic-shape">
+<span class="material-symbols-outlined text-4xl" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+</div>
+<h3 class="text-2xl font-bold font-headline text-on-surface">Metabolic Harmony</h3>
+<p class="text-on-surface-variant leading-relaxed">Rich in antioxidants and minerals that support digestion and hormone balance, keeping your inner ecosystem thriving.</p>
+</div>
+<div class="flex flex-col items-start gap-6">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary organic-shape">
+<span class="material-symbols-outlined text-4xl" data-icon="eco">eco</span>
+</div>
+<h3 class="text-2xl font-bold font-headline text-on-surface">Earth First</h3>
+<p class="text-on-surface-variant leading-relaxed">Our blends use byproducts of the cacao industry, turning waste into nutrient-dense rituals while supporting small farmers.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Collection -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-5xl font-extrabold font-headline mb-6 tracking-tight">The Collection</h2>
+<p class="text-xl text-on-surface-variant">Each blend is a deliberate composition of botanical strength and aromatic depth.</p>
+</div>
+<a class="text-primary font-bold border-b-2 border-primary/30 pb-1 hover:border-primary transition-all" href="#">View Full Catalog</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Product Card 1 -->
+<div class="group">
+<div class="bg-surface-container rounded-2xl p-8 mb-6 transition-all duration-500 group-hover:bg-surface-container-high">
+<div class="relative aspect-square mb-8 overflow-hidden rounded-xl">
+<img alt="Sorro Brew Original Blend bag" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern minimalist brown paper coffee bag packaging with terracotta and cream typography sitting on a wooden plinth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJkiHJ19owJpY3Dv0i5dXxMUJdG6D7E6ZHfkqhwVMv1WZwGfz2HG-sLTG_mSBG9zp0qez-aZtJWtgVzxnbPCMZXBs3XtJyyFxzmG2BgbT1cNDdZRTzW811Kqx-pSbS5JJ7Y1A7OFgscuGE0dZ_3cph3EeCNkwDr_McdgvWG0Z5Fp4U3Zvw83KJE14Ym2ZbL_7VfdIEoP7W7iodzCnLKM3PMbwlrOBm6YlYFGbjmSCszuwoTuYLLVtguQcarGOz_LxiD5Yi4pdh7oI"/>
+</div>
+<div class="flex justify-between items-center mb-2">
+<span class="text-secondary font-bold text-xs tracking-widest">SMOKY &amp; GROUNDED</span>
+<span class="text-on-surface-variant font-medium">$32</span>
+</div>
+<h4 class="text-2xl font-bold font-headline mb-2 text-on-surface">Original Ritual</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Cacao husk, roasted chicory, and hints of cinnamon. The foundation of Sorro.</p>
+<button class="w-full py-3 rounded-full border-2 border-outline-variant text-on-surface font-semibold hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300">
+                                Add to Ritual
+                            </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group">
+<div class="bg-surface-container rounded-2xl p-8 mb-6 transition-all duration-500 group-hover:bg-surface-container-high translate-y-8">
+<div class="relative aspect-square mb-8 overflow-hidden rounded-xl">
+<img alt="Sorro Brew Morning Glow bag" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist beige packaging for herbal brew with ochre accents, soft focused botanicals in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2AUU4l2JJ3EcN_U-x-Sb3_lDkg5P83ZET6iRWEAbU56Oi1HUd-9zFPvaWMELMxKq_s6qLxjpQ__RNni7V39ONRBmBoqNDsfIwm-stmtI-28R1Xa40Zs0uTCaXkedIUu_bKGu1X52eHOh0T4rC5dFEbrwDYzPV1IwV9OaLl3e-dMegTh6Bm82k_5Q9ustt0US1zlmzeWUVoW-btasAiPeBG0dnXPJcmhwYJgFh0FU6xZG1ctz1K2vu4OG2qs781BBp1nrcjXoQsA"/>
+</div>
+<div class="flex justify-between items-center mb-2">
+<span class="text-secondary font-bold text-xs tracking-widest">BRIGHT &amp; BOTANICAL</span>
+<span class="text-on-surface-variant font-medium">$34</span>
+</div>
+<h4 class="text-2xl font-bold font-headline mb-2 text-on-surface">Morning Glow</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Golden turmeric, ginger, and wild dandelion root for internal radiance.</p>
+<button class="w-full py-3 rounded-full border-2 border-outline-variant text-on-surface font-semibold hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300">
+                                Add to Ritual
+                            </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group">
+<div class="bg-surface-container rounded-2xl p-8 mb-6 transition-all duration-500 group-hover:bg-surface-container-high">
+<div class="relative aspect-square mb-8 overflow-hidden rounded-xl">
+<img alt="Sorro Brew Velvet Night bag" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Dark charcoal colored artisanal packaging for evening brew blend with subtle metallic copper text" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMqlJIP_PFLAJaW162ghOQAbgGZGVoUH_MoDWhoBlR_jxMgM3cPQgjWMehO__4yeUTct_dv8ezobg376uFBmGpS5bns2bXatGYnGwx9rntmqqMqJev3q-vp6yI9MnLpN_3BSO62jO9h-RyzA3Fr1VNNDA1jmCTFNfUzMWyyzZuX4LVl0kLd5Wz5hxTszeHbptHcHM__ooOaFapSCs7x5kAusszMbmi90omWS1ZbA9RAm0lWMqy36lLm9LTpa6QALsHecp-IV1oXac"/>
+</div>
+<div class="flex justify-between items-center mb-2">
+<span class="text-secondary font-bold text-xs tracking-widest">CALM &amp; DEEP</span>
+<span class="text-on-surface-variant font-medium">$32</span>
+</div>
+<h4 class="text-2xl font-bold font-headline mb-2 text-on-surface">Velvet Night</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Adaptogenic reishi mushrooms and vanilla bean for peaceful unwinding.</p>
+<button class="w-full py-3 rounded-full border-2 border-outline-variant text-on-surface font-semibold hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300">
+                                Add to Ritual
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Origin Section -->
+<section class="py-32 bg-primary-fixed relative overflow-hidden">
+<div class="absolute inset-0 grain-texture opacity-5"></div>
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="grid grid-cols-2 gap-6">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl translate-y-12">
+<img alt="Farmer in Salvadoran field" class="w-full h-full object-cover" data-alt="Close-up portrait of an elderly Salvadoran farmer with weathered hands smiling warmly in a sun-drenched agricultural field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM9rX0DBfO2qN825WgMP9DI_Szig_G00hWshEM9m_qId3pAaJeKfE9xnI0M-jKOEbHyPv3wl40Hy1tXyObfB8V5L3bq6e4DwGIEt1tftI0_2bAvQuulAJn3bhJgamNtjzkHkMIua4wEGiuhOjDJa2vdeRh05oYfTExTLQq_H8szPGpex0RO5gUHy5KRZErII8zdl0ldCvNCd5oCSQjuUyOXhIExUgw-hVScJKarbcKPLsgBrQqH73jYb4ffi_GT5w_fJ7MB374CTU"/>
+</div>
+<div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+<img alt="Salvadoran hills" class="w-full h-full object-cover" data-alt="Wide panoramic shot of rolling green hills in El Salvador at sunrise with mist clinging to the valley floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFQttkiUAIlbMEccblbY8unaEy2umaoH2vaUL2tY66p77S7onuWdwWxYbYDZm3jH9knzvoz4XgD6ieQLtMPdd73JKpq-mMNI3D6NYebvPSf9WOd4ok-ip8xwU-EPxw0eJuoGokxjRF3m8M_bGFi7rexFIp8DPhuHw_tgsJ7l_85itu_WiwyevB7HSEkURlWdyvgYu9BQNiJkhxI3kdGGDDfjj1JcD8j43UqEt3y2qBKMWuiXVqDDuGYUBOvrdbcToxWJb_3IETJZU"/>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary-container rounded-full flex items-center justify-center p-8 text-center animate-pulse-slow">
+<span class="text-on-secondary-container font-bold text-sm leading-tight font-headline">CERTIFIED REGENERATIVE PRACTICE</span>
+</div>
+</div>
+<div class="z-20">
+<h2 class="text-5xl font-extrabold font-headline mb-8 text-on-primary-fixed leading-tight">From Salvadoran Hills <br/>to Your Cup</h2>
+<p class="text-lg text-on-primary-fixed-variant mb-8 leading-relaxed">
+                        Our journey begins in the volcanic soil of El Salvador, where our partners cultivate cacao with generations of wisdom. We don't just source ingredients; we participate in a cycle of restoration that protects the biodiversity of the region and ensures fair livelihoods for every hand that touches the harvest.
+                    </p>
+<ul class="space-y-6 mb-10">
+<li class="flex items-center gap-4 text-on-primary-fixed-variant font-medium">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+                            Direct Trade Transparency
+                        </li>
+<li class="flex items-center gap-4 text-on-primary-fixed-variant font-medium">
+<span class="material-symbols-outlined text-primary" data-icon="eco">eco</span>
+                            Regenerative Agriculture Only
+                        </li>
+<li class="flex items-center gap-4 text-on-primary-fixed-variant font-medium">
+<span class="material-symbols-outlined text-primary" data-icon="water_drop">water_drop</span>
+                            Low-Impact Water Processing
+                        </li>
+</ul>
+<button class="bg-on-primary-fixed text-surface px-8 py-4 rounded-full font-bold hover:bg-primary transition-colors duration-300">
+                        Our Story
+                    </button>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-32 px-6">
+<div class="max-w-4xl mx-auto bg-surface-container-highest rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed rounded-full blur-[100px] opacity-30"></div>
+<h2 class="text-4xl md:text-5xl font-extrabold font-headline mb-6 relative z-10">Keep the Ritual Close</h2>
+<p class="text-xl text-on-surface-variant mb-10 relative z-10">Sign up for 'The Journal'—our monthly meditation on slow living, earth wisdom, and seasonal blends.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto relative z-10">
+<input class="flex-grow bg-surface border-none rounded-full px-8 py-4 focus:ring-2 focus:ring-primary text-on-surface" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold hover:fired-clay-gradient transition-all" type="submit">
+                        Subscribe
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-[#f2ede6] border-t border-[#dbc1ba]/20 px-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-lg font-semibold text-[#55433e] font-headline">Sorro Brew</span>
+<p class="text-[#55433e] text-sm tracking-wide font-['Plus_Jakarta_Sans']">© 2024 Sorro Brew. Grounded in Earth.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#55433e] hover:text-[#94452e] transition-colors font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Sustainability</a>
+<a class="text-[#55433e] hover:text-[#94452e] transition-colors font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Wholesale</a>
+<a class="text-[#55433e] hover:text-[#94452e] transition-colors font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Contact</a>
+<a class="text-[#55433e] hover:text-[#94452e] transition-colors font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Privacy</a>
+</div>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="language">language</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="favorite">favorite</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

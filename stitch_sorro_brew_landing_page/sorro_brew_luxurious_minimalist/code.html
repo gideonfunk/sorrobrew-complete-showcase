@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#eceabe",
+              "on-error": "#ffffff",
+              "background": "#fefccf",
+              "secondary-fixed-dim": "#cac99f",
+              "primary-container": "#d4af37",
+              "on-primary-container": "#554300",
+              "tertiary": "#415ba4",
+              "tertiary-fixed-dim": "#b4c5ff",
+              "secondary-container": "#e6e5b9",
+              "inverse-surface": "#323214",
+              "on-primary-fixed": "#241a00",
+              "on-secondary-fixed-variant": "#484828",
+              "primary": "#735c00",
+              "primary-fixed": "#ffe088",
+              "surface-bright": "#fefccf",
+              "secondary-fixed": "#e6e5b9",
+              "tertiary-fixed": "#dbe1ff",
+              "on-surface": "#1d1d03",
+              "on-tertiary-fixed": "#00174b",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#97b0ff",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#e9c349",
+              "inverse-primary": "#e9c349",
+              "on-surface-variant": "#4d4635",
+              "on-primary-fixed-variant": "#574500",
+              "surface-container": "#f2f0c4",
+              "error": "#ba1a1a",
+              "surface": "#fefccf",
+              "on-secondary-container": "#666643",
+              "on-tertiary-fixed-variant": "#27438a",
+              "secondary": "#60603e",
+              "surface-container-low": "#f8f6c9",
+              "outline-variant": "#d0c5af",
+              "outline": "#7f7663",
+              "inverse-on-surface": "#f5f3c7",
+              "on-tertiary": "#ffffff",
+              "surface-tint": "#735c00",
+              "on-secondary-fixed": "#1d1d03",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e6e5b9",
+              "surface-container-highest": "#e6e5b9",
+              "surface-dim": "#dedcb1",
+              "on-background": "#1d1d03",
+              "on-secondary": "#ffffff",
+              "on-tertiary-container": "#254188"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      body { background-color: #fefccf; color: #1d1d03; font-family: 'Manrope', sans-serif; }
+      .glass-nav { background: rgba(254, 252, 207, 0.8); backdrop-filter: blur(12px); }
+      .premium-gradient { background: linear-gradient(135deg, #735c00 0%, #d4af37 100%); }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fefccf]/80 dark:bg-stone-950/80 backdrop-blur-md shadow-[0_10px_40px_-15px_rgba(29,29,3,0.05)]">
+<div class="flex justify-between items-center px-6 md:px-16 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="font-['notoSerif'] text-2xl tracking-tighter text-[#1d1d03] dark:text-[#fefccf]">Sorro Brew</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-['notoSerif'] tracking-wide text-sm uppercase text-[#735c00] dark:text-[#d4af37] border-b border-[#d4af37]/30 pb-1 hover:text-[#735c00] transition-colors duration-500 ease-in-out" href="#">The Roast</a>
+<a class="font-['notoSerif'] tracking-wide text-sm uppercase text-[#1d1d03]/70 dark:text-[#fefccf]/70 hover:text-[#735c00] transition-colors duration-500 ease-in-out" href="#">Our Heritage</a>
+<a class="font-['notoSerif'] tracking-wide text-sm uppercase text-[#1d1d03]/70 dark:text-[#fefccf]/70 hover:text-[#735c00] transition-colors duration-500 ease-in-out" href="#">The Ritual</a>
+<a class="font-['notoSerif'] tracking-wide text-sm uppercase text-[#1d1d03]/70 dark:text-[#fefccf]/70 hover:text-[#735c00] transition-colors duration-500 ease-in-out" href="#">Shop</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden md:block font-['notoSerif'] tracking-wide text-sm uppercase text-[#735c00] hover:opacity-100 transition-opacity">Newsletter</button>
+<span class="material-symbols-outlined text-[#1d1d03] cursor-pointer" data-icon="shopping_bag">shopping_bag</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-32 pb-20 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-[radial-gradient(circle,_#d4af37_0%,_transparent_70%)]"></div>
+</div>
+<div class="relative z-10 max-w-4xl text-center space-y-10">
+<p class="font-label text-xs tracking-[0.3em] uppercase text-primary mb-4">Salvadoran Artisanal Cacao</p>
+<h1 class="font-headline text-5xl md:text-8xl text-on-surface leading-[1.1] tracking-tight">
+                Break up with coffee,<br/>
+<span class="italic font-normal opacity-80">not your morning</span>
+</h1>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8 pt-6">
+<button class="premium-gradient text-on-primary px-10 py-5 rounded-md font-body font-semibold tracking-wide shadow-xl hover:scale-[1.02] transition-transform duration-500">
+                    Explore the Ritual
+                </button>
+<button class="text-primary font-body font-semibold flex items-center gap-2 group">
+                    Our Origin Story 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-20 w-full max-w-6xl relative">
+<div class="aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Brewing ritual" class="w-full h-full object-cover" data-alt="close-up of steaming cacao beverage being poured into a minimalist ceramic mug on a warm wood surface with morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCca13hrL2aQTkfVg6QufnxIyHJUxFOj4qplXZRAe8SN_gNvuFT8t3ErVma9_Ryolo4sUTUCWLfX_Hiz-m54EHzpk_GqZ-7cmW7AwpuWXXa2dz-y0gwhjg-_up6ouHsIsvTV5tX7XYyGDhX-JDYBGTQd4elyb0qdNnTMY-IaPnEeD8BXeG5ZOPXCHPucCAJdSnfMiFMFMwuQnO8w_e-75t3qOnxVREMDHQCKNO7e3UNlD4kgFZv6wmbG7eY5BumbqaJgvpE5Wbxymw"/>
+</div>
+</div>
+</section>
+<!-- The Collection -->
+<section class="bg-surface-container-low py-32 px-6 md:px-16">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+<div class="space-y-4">
+<span class="font-label text-xs tracking-widest uppercase text-primary/60">Curated Blends</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface">The Collection</h2>
+</div>
+<a class="font-label text-sm uppercase tracking-widest border-b border-primary/20 pb-1 text-primary hover:border-primary transition-all" href="#">View All Products</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] bg-surface overflow-hidden rounded-sm mb-8 transition-all duration-700 group-hover:shadow-2xl">
+<img alt="Dark Roast" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="minimalist product photography of a premium cacao bag standing on a stone plinth with soft architectural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHPxRNCn8ajtp6DaBexaNXz9X7jqbvMNqrajfWRgEm018HXSU59xnFy5xlwfA50uGfjS3x7201PCI73Qb1fTKz4R_6d_W05LKaT-6AELvXW8igDWxOo3QgbxRu_UmsNRXTQUvxwu2I80VqB28fRH2Du1bHfU0mMqjU8iqvuR6Kb9V_Z8pYo3G5HrAnDp1lmPvIy7KhfqO5D8AIX7tCneiESh_BTdCyeW5P-nYIxOh0lf54QBxv639kl2ILUXLA1kzV3AmpEcHZPZY"/>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline text-2xl text-on-surface">Midnight Ritual</h3>
+<p class="font-body text-sm text-on-surface/60">Notes of roasted nuts &amp; star anise</p>
+<p class="font-label text-sm font-semibold pt-4">$38.00</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer md:mt-12">
+<div class="aspect-[4/5] bg-surface overflow-hidden rounded-sm mb-8 transition-all duration-700 group-hover:shadow-2xl">
+<img alt="Medium Roast" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="artisanal cacao powder in a small glass jar surrounded by raw cacao beans on a clean neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZfUqwFEg75MGlRqsJb1GHle16zvyre1HUK5nZgUvndfhkmrkVfR79NyIJjyhG0n4dx2XbJ7VhZgITUVKDynm7ewXCMyzBSPSJ2Jytk4ypKMPIxEXIzziabOb2hc0yA2ZRCfVuYOWFThbvHE4FLGCSUskrB_zTfcCFhWWznu3KFeTsLoXjhPMxaAKcQPwns43VvYiuMzwYZSgq5cFr2Bc6KlKle-s-4AL91qk3eZz3bXQn6m6zuD8v5-3m_CGAEzBgjjSarMhfyMs"/>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline text-2xl text-on-surface">Sun-Drenched Bloom</h3>
+<p class="font-body text-sm text-on-surface/60">Floral undertones &amp; bright citrus finish</p>
+<p class="font-label text-sm font-semibold pt-4">$42.00</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] bg-surface overflow-hidden rounded-sm mb-8 transition-all duration-700 group-hover:shadow-2xl">
+<img alt="Limited Edition" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="overhead view of a beautifully set morning table with a cup of cacao and a linen napkin in a bright sunlit kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa98j2f7T29Xtu7c_yh9DuQFZt-qVJzN_u1TkCUygS6i0exdDMOT9va0DsLe5JkiGy45IC_0__K3iKJqvXoahS5qGf56WKrgx6-dZd_LRQpHG72r5360Eb354JdyE2jBRnzqVxuTYWwGTZ9kagiV6Yd932lSS_nJ_AQL9gBbYEoAaDJXZ1muPLldBGP8PHYELP5YKVYzibIvd8uEJgx7uQGvLvqSHKPRcexLmbWGI6qyu-Kaxl3Zbyn63c1Lmnre3A-D7RZ4S-5uI"/>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline text-2xl text-on-surface">Volcanic Essence</h3>
+<p class="font-body text-sm text-on-surface/60">Limited release, single origin Salvadoran reserve</p>
+<p class="font-label text-sm font-semibold pt-4">$55.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Heritage Story -->
+<section class="py-32 px-6 md:px-16 bg-surface overflow-hidden">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-24">
+<div class="relative order-2 lg:order-1">
+<div class="aspect-[3/4] rounded-lg overflow-hidden shadow-2xl relative z-10">
+<img alt="Heritage" class="w-full h-full object-cover" data-alt="landscape of lush green coffee and cacao plantations in El Salvador under a misty morning sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByIMx4E_-V2NHvtJGPcOSL4X8Kpk58wduyr-eERZsDEwZCYXc46qCu5KoOIAqS1KlTqoWG9w80XDVGcOftcdBP221q701ynvEwaC7zb6O-8q51eVD-8lS3-62xe9jLbAZUPhr_FCk30X5n8bMvKDaZxgK_9Br3OxW1tfH9ye3ja-fUeTjilhJGsWvlLPdBWreqStLJKz_4pF2mwPV1eULBYwc15-C2vKDd9YKELMoj6MCHj92EelqRfloG0cjq8beI7U7uQp0iStk"/>
+</div>
+<div class="absolute -bottom-12 -right-12 w-2/3 aspect-square bg-surface-container-high -z-10 rounded-sm"></div>
+</div>
+<div class="space-y-12 order-1 lg:order-2">
+<span class="font-label text-xs tracking-[0.4em] uppercase text-primary">Our Origin</span>
+<h2 class="font-headline text-4xl md:text-6xl text-on-surface leading-tight">From Salvadoran Hills to Your Cup</h2>
+<div class="space-y-6 text-lg text-on-surface/80 font-body leading-relaxed max-w-xl">
+<p>Rooted in the rich volcanic soil of the Apaneca-Ilamatepec range, Sorro Brew isn't just a drink; it's a bridge to a thousand-year-old ritual.</p>
+<p>We work directly with third-generation farmers to ensure each bean is sun-dried and hand-sorted, preserving the complex profiles that modern processing often overlooks.</p>
+</div>
+<button class="border border-primary-container/30 px-12 py-5 text-primary font-body tracking-widest uppercase text-xs hover:bg-primary-container/5 transition-colors">
+                    The Heritage Story
+                </button>
+</div>
+</div>
+</section>
+<!-- Benefits Grid -->
+<section class="py-32 px-6 md:px-16 bg-surface-container">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-24 text-center md:text-left">
+<div class="space-y-6">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-lowest rounded-full mx-auto md:mx-0 shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+</div>
+<h3 class="font-headline text-2xl text-on-surface">Sustained Energy</h3>
+<p class="font-body text-on-surface/70 leading-relaxed">Unlike the sharp spike and crash of caffeine, theobromine provides a gentle, long-lasting lift for the mind and body.</p>
+</div>
+<div class="space-y-6">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-lowest rounded-full mx-auto md:mx-0 shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-headline text-2xl text-on-surface">Mood Elevation</h3>
+<p class="font-body text-on-surface/70 leading-relaxed">Pure cacao is rich in anandamide—the "bliss molecule"—naturally supporting emotional well-being and focus.</p>
+</div>
+<div class="space-y-6">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-lowest rounded-full mx-auto md:mx-0 shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="temp_preferences_custom">temp_preferences_custom</span>
+</div>
+<h3 class="font-headline text-2xl text-on-surface">Antioxidant Rich</h3>
+<p class="font-body text-on-surface/70 leading-relaxed">Packed with more antioxidants than blueberries, our roast supports cellular health and overall longevity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 bg-[#f8f6c9] dark:bg-stone-900">
+<div class="flex flex-col items-center gap-12 px-6 md:px-16 w-full">
+<div class="font-['notoSerif'] italic text-3xl text-[#1d1d03] dark:text-[#fefccf]">Sorro Brew</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="font-['manrope'] text-xs tracking-widest uppercase text-[#1d1d03]/50 dark:text-[#fefccf]/40 hover:text-[#1d1d03] dark:hover:text-[#fefccf] transition-all duration-300" href="#">Sustainability</a>
+<a class="font-['manrope'] text-xs tracking-widest uppercase text-[#1d1d03]/50 dark:text-[#fefccf]/40 hover:text-[#1d1d03] dark:hover:text-[#fefccf] transition-all duration-300" href="#">Wholesale</a>
+<a class="font-['manrope'] text-xs tracking-widest uppercase text-[#1d1d03]/50 dark:text-[#fefccf]/40 hover:text-[#1d1d03] dark:hover:text-[#fefccf] transition-all duration-300" href="#">Privacy Policy</a>
+<a class="font-['manrope'] text-xs tracking-widest uppercase text-[#1d1d03]/50 dark:text-[#fefccf]/40 hover:text-[#1d1d03] dark:hover:text-[#fefccf] transition-all duration-300" href="#">Shipping</a>
+</div>
+<div class="w-full max-w-4xl h-px bg-primary/10"></div>
+<div class="font-['manrope'] text-[10px] tracking-widest uppercase text-[#735c00] dark:text-[#d4af37] text-center opacity-60">
+                © 2024 Sorro Brew. Salvadoran Heritage, Roasted for the Modern Ritual.
+            </div>
+</div>
+</footer>
+</body></html>

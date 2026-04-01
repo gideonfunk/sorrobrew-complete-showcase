@@ -1,0 +1,51 @@
+{
+  "name": "stitch-sorro-brew-landing-page",
+  "version": "1.0.0",
+  "description": "Sorro Brew - Salvadoran Heritage Coffee Substitute Landing Page with Earth Modern Design",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "npm run optimize:assets && npm run minify:html && npm run generate:dist",
+    "build:prod": "npm run build && npm run compress:assets",
+    "optimize:assets": "node scripts/optimize-assets.js",
+    "minify:html": "html-minifier --input-dir=. --output-dir=dist --file-ext=html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true",
+    "generate:dist": "node scripts/generate-dist.js",
+    "compress:assets": "node scripts/compress-assets.js",
+    "preview": "npm run build && live-server --port=3001 --host=localhost --root=dist",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod",
+    "lint": "htmlhint .",
+    "validate": "html-validate .",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug"
+  },
+  "keywords": [
+    "coffee-substitute",
+    "maicillo",
+    "salvadoran-heritage",
+    "earth-modern-design",
+    "wellness",
+    "caffeine-free"
+  ],
+  "author": "Stitch Sorro Brew",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.19.0",
+    "cssnano": "^6.0.0",
+    "sharp": "^0.32.0",
+    "htmlhint": "^1.1.4",
+    "html-validate": "^8.0.0",
+    "@playwright/test": "^1.40.0"
+  },
+  "dependencies": {
+    "vercel": "^32.0.0",
+    "netlify-cli": "^17.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
