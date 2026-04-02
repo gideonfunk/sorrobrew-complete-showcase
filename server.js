@@ -28,7 +28,7 @@ const server = http.createServer((req, res) => {
   // Handle root request
   let filePath = '.' + req.url;
   if (filePath === './') {
-    filePath = './stitch_sorro_brew_landing_page/sorro_brew_landing_page/code.html';
+    filePath = './index.html';
   }
 
   const extname = String(path.extname(filePath)).toLowerCase();
@@ -37,13 +37,13 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (error, content) => {
     if (error) {
       if (error.code === 'ENOENT') {
-        // Try to serve index.html for SPA routing
-        fs.readFile('./stitch_sorro_brew_landing_page/sorro_brew_landing_page/code.html', (error, content) => {
+        // Try to serve 404 page
+        fs.readFile('./404.html', (error, content) => {
           if (error) {
             res.writeHead(404, { 'Content-Type': 'text/html' });
             res.end('<h1>404 Not Found</h1>', 'utf-8');
           } else {
-            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.writeHead(404, { 'Content-Type': 'text/html' });
             res.end(content, 'utf-8');
           }
         });

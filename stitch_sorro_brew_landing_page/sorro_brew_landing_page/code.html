@@ -91,10 +91,10 @@
 <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
 <div class="text-2xl font-black text-stone-900 tracking-tighter font-headline">Sorro Brew</div>
 <div class="hidden md:flex items-center gap-10">
-<a class="font-headline tracking-tight font-bold text-stone-600 hover:text-stone-900 transition-colors" href="#">Our Farmers</a>
-<a class="font-headline tracking-tight font-bold text-stone-600 hover:text-stone-900 transition-colors" href="#">Brewing Guide</a>
-<a class="font-headline tracking-tight font-bold text-yellow-700 border-b-2 border-yellow-600 pb-1" href="#">Shop All</a>
-<a class="font-headline tracking-tight font-bold text-stone-600 hover:text-stone-900 transition-colors" href="#">Heritage</a>
+<a class="font-headline tracking-tight font-bold text-stone-600 hover:text-stone-900 transition-colors" href="../the_maicillo_journey_farmer_stories_ethical_sourcing/code.html">Our Farmers</a>
+<a class="font-headline tracking-tight font-bold text-stone-600 hover:text-stone-900 transition-colors" href="../sorro_brew_cafe_menu_order/code.html">Brewing Guide</a>
+<a class="font-headline tracking-tight font-bold text-yellow-700 border-b-2 border-yellow-600 pb-1" href="../../index.html">Shop All</a>
+<a class="font-headline tracking-tight font-bold text-stone-600 hover:text-stone-900 transition-colors" href="../our_story_the_sorro_brew_journey/code.html">Heritage</a>
 </div>
 <div class="flex items-center gap-6">
 <button class="material-symbols-outlined text-stone-900 hover:opacity-80 transition-opacity" data-icon="shopping_bag">shopping_bag</button>
@@ -286,4 +286,40 @@
 </div>
 </div>
 </footer>
+<script src="../../navigation.js"></script>
+<script>
+// Make buttons functional
+document.addEventListener('DOMContentLoaded', function() {
+    // Shopping bag button - go to menu/order page
+    const shoppingBag = document.querySelector('[data-icon="shopping_bag"]');
+    if (shoppingBag) {
+        shoppingBag.addEventListener('click', function() {
+            window.location.href = '../sorro_brew_cafe_menu_order/code.html';
+        });
+    }
+    
+    // Person button - go to contact page
+    const personBtn = document.querySelector('[data-icon="person"]');
+    if (personBtn) {
+        personBtn.addEventListener('click', function() {
+            window.location.href = '../sorro_brew_contact_us_ritual_support/code.html';
+        });
+    }
+    
+    // Make all buttons with proper navigation
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        const text = button.textContent.trim().toLowerCase();
+        if (text.includes('shop now')) {
+            button.addEventListener('click', function() {
+                window.location.href = '../sorro_brew_cafe_menu_order/code.html';
+            });
+        } else if (text.includes('explore')) {
+            button.addEventListener('click', function() {
+                window.location.href = '../our_story_the_sorro_brew_journey/code.html';
+            });
+        }
+    });
+});
+</script>
 </body></html>
