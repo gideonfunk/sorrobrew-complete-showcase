@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#e3beb8",
+              "on-tertiary-container": "#ae8d81",
+              "secondary": "#735c00",
+              "on-tertiary-fixed": "#2b160f",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#745853",
+              "on-surface-variant": "#504442",
+              "surface-container": "#f2f0c4",
+              "tertiary-fixed": "#ffdbce",
+              "secondary-fixed": "#ffe088",
+              "outline": "#827472",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#e6e5b9",
+              "surface-container-low": "#f8f6c9",
+              "on-background": "#1d1d03",
+              "on-tertiary": "#ffffff",
+              "tertiary-container": "#3e271e",
+              "on-primary-container": "#ae8d87",
+              "tertiary": "#27130b",
+              "primary": "#271310",
+              "on-secondary-container": "#745c00",
+              "inverse-surface": "#323214",
+              "primary-fixed": "#ffdad4",
+              "primary-container": "#3e2723",
+              "on-primary": "#ffffff",
+              "surface-bright": "#fefccf",
+              "surface": "#fefccf",
+              "on-secondary-fixed": "#241a00",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#eceabe",
+              "tertiary-fixed-dim": "#e4beb2",
+              "secondary-fixed-dim": "#e9c349",
+              "on-primary-fixed": "#2b1613",
+              "inverse-primary": "#e3beb8",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#574500",
+              "on-primary-fixed-variant": "#5b403c",
+              "surface-dim": "#dedcb1",
+              "secondary-container": "#fed65b",
+              "outline-variant": "#d3c3c0",
+              "on-surface": "#1d1d03",
+              "on-tertiary-fixed-variant": "#5b4137",
+              "inverse-on-surface": "#f5f3c7",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-variant": "#e6e5b9",
+              "background": "#fefccf"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .editorial-text-shadow {
+        text-shadow: 0 4px 12px rgba(29, 29, 3, 0.15);
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fefccf] dark:bg-[#1d1d03] opacity-80 backdrop-blur-md shadow-xl shadow-[#1d1d03]/5">
+<div class="flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-2xl font-black text-[#271310] dark:text-[#fefccf] tracking-tighter font-manrope">Sorro Brew</div>
+<div class="hidden md:flex gap-10">
+<a class="font-manrope font-bold tracking-tight text-[#271310] dark:text-[#fefccf] opacity-80 hover:opacity-100 transition-colors duration-300" href="#">Heritage</a>
+<a class="font-manrope font-bold tracking-tight text-[#271310] dark:text-[#fefccf] opacity-80 hover:opacity-100 transition-colors duration-300" href="#">Our Farmers</a>
+<a class="font-manrope font-bold tracking-tight text-[#271310] dark:text-[#fefccf] opacity-80 hover:opacity-100 transition-colors duration-300" href="#">Brewing Guide</a>
+<a class="font-manrope font-bold tracking-tight text-[#271310] dark:text-[#fefccf] opacity-80 hover:opacity-100 transition-colors duration-300" href="#">Shop</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#271310] dark:text-[#fefccf] cursor-pointer scale-95 duration-200 ease-in-out hover:text-[#735c00]" data-icon="shopping_bag">shopping_bag</span>
+<span class="material-symbols-outlined text-[#271310] dark:text-[#fefccf] cursor-pointer scale-95 duration-200 ease-in-out hover:text-[#735c00]" data-icon="person">person</span>
+</div>
+</div>
+<div class="bg-[#e6e5b9] dark:bg-[#3e2723] h-[1px] w-full self-bottom"></div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Salvadoran landscape" class="w-full h-full object-cover" data-alt="expansive golden hour landscape of lush green volcanic mountains in El Salvador with rolling fields of tall maicillo stalks under a warm sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2u9UOQaTf132fDszunJ6mEVpNhwEEuOSu5GI5v8L0l0FOznW7YxxFQzrmqMCiyJSESIrdXtxCvIHDHGXv9DC80u6qP-GMo-HogMvzryuKuGolFsWSEQ2eHNvFEqqTDDSJ8pZ-l60RFM3fQKMo5JYmpPgdx4lNFG30jq0GuUeQTrIBEsWkgFCYMilHVdN2Flwv5p72ge-p7MuHjv3_uIEyw_Imt-B3nphJvBJbGWVXyb5PvDZhmzBc1ldIAOGP2GIxpaaSpitQ1To"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-8 md:px-20 max-w-4xl">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 mb-6 text-xs font-bold tracking-[0.2em] uppercase rounded-full">The Origin Story</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-surface leading-[1.1] tracking-tight editorial-text-shadow">
+                    From Salvadoran Volcanic Soil to Your Vancouver Morning
+                </h1>
+<p class="mt-8 text-xl text-surface/90 max-w-xl leading-relaxed">
+                    Sorro Brew is more than a drink; it's a revival of ancestral wisdom, distilled into a modern ritual of wellness and clarity.
+                </p>
+</div>
+</section>
+<!-- Ancestral Wisdom Section -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden shadow-2xl">
+<img alt="Heritage Grain" class="w-full h-full object-cover" data-alt="close-up of weathered hands cupping roasted maicillo grains in warm natural light, emphasizing texture and earthiness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnWBVye2D4Af76Jh2Swp-zRkZhloldBvagNbnd6wfeGqOGQbS5nSN5svN8rSvjPcYLfHddVE4gFaYdHbJiHAu8OaFR4Og97t_8bXMAhKzufrlpGh1rXHjWxIdXHlXp5Tp0xVhp_WPaKVXdsWq2agK5DtXhXXPhoMvjZYURJZldwXhhRJf_H3QGQUWWyq_VxHw-cOpHgBRBDMOTxqAEqxhNfBvU4E2ZZ1xCSz29OSAyeusCVaxojRfCoI3gcP0ne2IPmkXwZAMN3Tg"/>
+</div>
+<!-- Heritage Badge Overlap -->
+<div class="absolute -bottom-8 -right-8 w-40 h-40 bg-secondary-container rounded-full flex items-center justify-center p-6 text-center transform rotate-12 shadow-xl">
+<span class="font-headline font-bold text-on-secondary-container text-sm uppercase tracking-wider">Ancestral Ritual Since 1920</span>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-8 pl-0 lg:pl-12">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-primary leading-tight">Ancestral Wisdom: Manuel’s Legacy</h2>
+<div class="space-y-6 text-lg text-on-surface-variant leading-relaxed font-body italic">
+<p>
+                            In the shadow of the Santa Ana volcano, Manuel’s family perfected the art of the maicillo roast. It wasn't just sustenance; it was a rhythmic connection to the land. They called it 'the seed of the sun.'
+                        </p>
+<p class="not-italic text-on-surface">
+                            Every morning, the aroma of slow-toasted grains filled the air, signaling a day of focus and vitality. We carry this torch forward, using the same slow-roasting techniques passed down through four generations.
+                        </p>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center text-primary font-bold group" href="#">
+<span class="border-b-2 border-secondary-container pb-1 transition-all group-hover:border-secondary">Explore the Process</span>
+<span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Farmers Section - Bento Style -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-center max-w-2xl mx-auto">
+<h2 class="text-4xl font-headline font-extrabold text-primary mb-6">Our Farmers: The Soul of Sorro</h2>
+<p class="text-on-surface-variant">We don't just trade; we partner. Our direct-trade model ensures regenerative practices that give back to the Salvadoran soil as much as they take.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-[700px]">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-primary shadow-lg">
+<img alt="Farmer Portrait" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="portrait of an elderly Salvadoran farmer with a warm smile standing in a sun-drenched field, shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpgRHuF8c2ucKcHhWzx8v0ptoiOj9G9PvN37j4EAOa0mBH8LZ-DxszlJUrHey6Z2t91CJRaiqXxCGjSFvK54_NnW6aULIWp7l9-ig6Udtlhx6kj2Q2iWoUt6U6tLmwMx9l5QcJWzneOQ1yJ-sdpQ3eFpqhuatXMiziVrtIGvj3_XxR_btWTjJiNf2TeaBSnzUMOPtDreR0vJZfimG96LCSs6dsYwxiT7uFsNbRac2JqjMXndSBwbDbx5MBgfHHRv5jYJ2N-lCkJz8"/>
+<div class="absolute bottom-0 left-0 p-8 text-surface">
+<h3 class="text-2xl font-headline font-bold mb-2">Don Ricardo</h3>
+<p class="text-sm opacity-90">Guardian of the Usulután Highlands</p>
+</div>
+</div>
+<!-- Side Card 1 -->
+<div class="md:col-span-2 relative group overflow-hidden bg-secondary shadow-lg">
+<img alt="Farming Field" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" data-alt="rows of vibrant green crops growing in rich dark volcanic soil with organic mulch and sustainable irrigation details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSx8HKVqAamJB9IHsyYtLgALEBKbqmBjDwsxEhaKcATvYbxd5Wbjq1ed4W-uigLa2Js_Nwic5A5N5o2K4sn_gIKfaO-HH7-wBt4oVBUtZeQuDivXldwvIrkSNUr6ONYJam6mIzPip4PPn9jwMrudPkWIi5V6brYcrKglFavDxCaWBWklj6nHI6pbuYJi0-yYygbIr1Tf9wz4pKPvBRnR_rgNb-YnIlYmWK2tG93a2igx8FmPryZcvaBoGzJmbhGu1_mMrKcBi2MT0"/>
+<div class="absolute inset-0 flex items-center justify-center p-8 text-center text-surface">
+<div>
+<h3 class="text-xl font-headline font-bold mb-2">Regenerative Future</h3>
+<p class="text-sm">Restoring biodiversity in Every Harvest</p>
+</div>
+</div>
+</div>
+<!-- Side Card 2 -->
+<div class="relative group overflow-hidden bg-primary-container shadow-lg">
+<img alt="Landscape Close-up" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="close-up of lush tropical foliage with morning dew drops against a soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAdMH0I_OakBWAVKD7Pao8eUvfs_16jWnynIOR6-zBoq-IKWNshZ8IFmVc2iI9nQ0tOb2vARTv0oO6J5CsITC-AgjOh0ihXRoz0Yp3XtDBY3omfyT48yRrKBgZoyyMP6MKfN3l_GVCxDIPFTuCy93OsDUziwUVlHF0Fv_KnfnPVeo3YUb8JnpuK0FcOuTKdW4ViqD3judJwgTyamONj7I82OCHVZ8B_I3fB0vQJHxFpuPUg1msnXkRviQFpE6n834mD7Wgx82njMI"/>
+<div class="absolute inset-0 p-6 flex items-end">
+<p class="text-xs font-bold text-surface tracking-widest uppercase">Micro-Lot Quality</p>
+</div>
+</div>
+<!-- Side Card 3 -->
+<div class="relative group overflow-hidden bg-secondary shadow-lg">
+<img alt="Harvesting" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="close-up of a wooden basket filled with freshly harvested grains sitting on the earthy ground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAocOINODF7ZY6meojTFwdTH80_3g8F49V499_ciuYwEyjqHjXvH1DP_TNpCvLotvNDog7N41gA8uSkQeIVfAM5OiRl6i1rV_91GbV2elglGTgzlw0hAvhkboNMdxP2dAkgW4Z58Imj4q9R6TyBuV9R-qZBN4qbKceRhFHQVVafJW_fgPcJ6OpLK2qRDRTUCXwbTMpLrXrMZU5k230OHtHrri5mNBY58_4ADeJPZ0-okPe6To6tgr7cH8XEcjR_WdN7C0Jz7ZOJhow"/>
+<div class="absolute inset-0 p-6 flex items-end">
+<p class="text-xs font-bold text-surface tracking-widest uppercase">Traditional Harvest</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vancouver Connection -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row items-center gap-20">
+<div class="flex-1 space-y-10">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-primary leading-tight">
+                            The Vancouver Bridge
+                        </h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                            Vancouver is where our tradition meets modern lifestyle. In a city that moves fast, Sorro Brew offers a moment to ground yourself. We’ve brought the warmth of the Salvadoran sun to the Pacific Northwest, creating a bridge between ancestral nourishment and contemporary wellness.
+                        </p>
+<div class="grid grid-cols-2 gap-8 py-4">
+<div class="space-y-2">
+<span class="text-secondary font-bold text-3xl">100%</span>
+<p class="text-sm font-label uppercase tracking-widest text-on-surface/60">Caffeine Free</p>
+</div>
+<div class="space-y-2">
+<span class="text-secondary font-bold text-3xl">Local</span>
+<p class="text-sm font-label uppercase tracking-widest text-on-surface/60">Vancouver Roasted</p>
+</div>
+</div>
+<button class="bg-secondary text-on-secondary px-8 py-4 font-headline font-bold hover:bg-primary transition-all shadow-lg flex items-center gap-3">
+                            Join the Ritual
+                            <span class="material-symbols-outlined text-sm" data-icon="local_cafe">local_cafe</span>
+</button>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -top-10 -left-10 w-full h-full bg-surface-container-highest/30 -z-10 translate-x-4 translate-y-4"></div>
+<img alt="Vancouver Lifestyle" class="w-full h-auto shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" data-alt="modern minimalist Vancouver cafe interior with large windows and soft daylight reflecting on a wooden table with a cup of Sorro brew" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYWsmJLOtAfxCX6JIa_Cx4zwvKmVHNfRIvImO4CuuExZMCIKpNH4rV91jmTjUuD5XuwlSKvF2PN-NOKxf8nkP27AGBW0B7GTj4jR23S-ydhWIC-EyP2HvmbcxF3L2vIRO6oncsjoC7mE6Z03eaU476IGi5kcjwHlS19eOL2vCkppv-jypwF5HCSkefqgICK4yhqPnj2DFAhgpgzA0th-ynBzn3tYb3IE_-MpcmExX-TkaeDD6yfem0zEik-h0RehnKSAlplZ91MUk"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#e6e5b9] dark:bg-[#271310] w-full py-12 px-8 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto font-be-vietnam-pro text-sm leading-relaxed text-[#3e2723] dark:text-[#fefccf]">
+<div class="space-y-4">
+<div class="text-xl font-bold text-[#271310] dark:text-[#fefccf]">Sorro Brew</div>
+<p class="opacity-70">© 2024 Sorro Brew. Salvadoran Heritage Rituals.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold uppercase tracking-widest mb-2 opacity-50">Our World</h4>
+<a class="opacity-70 hover:opacity-100 hover:text-[#735c00] transition-opacity underline-offset-4 hover:underline" href="#">Sustainability</a>
+<a class="opacity-70 hover:opacity-100 hover:text-[#735c00] transition-opacity underline-offset-4 hover:underline" href="#">Direct Trade</a>
+<a class="opacity-70 hover:opacity-100 hover:text-[#735c00] transition-opacity underline-offset-4 hover:underline" href="#">Wholesale</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold uppercase tracking-widest mb-2 opacity-50">Support</h4>
+<a class="opacity-70 hover:opacity-100 hover:text-[#735c00] transition-opacity underline-offset-4 hover:underline" href="#">Contact</a>
+<a class="opacity-70 hover:opacity-100 hover:text-[#735c00] transition-opacity underline-offset-4 hover:underline" href="#">Privacy</a>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold uppercase tracking-widest opacity-50">Newsletter</h4>
+<div class="relative">
+<input class="w-full bg-surface-container-low/50 border-none px-4 py-3 text-primary focus:ring-1 focus:ring-secondary" placeholder="Your email" type="email"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 text-secondary">
+<span class="material-symbols-outlined" data-icon="arrow_right_alt">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+<script src="../../universal-fix.js"></script>
+</body></html>

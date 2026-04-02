@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Account | Sorro Brew</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script type="module">
+import { sorroBrewState } from '../../src/state-management.js';
+import { EARTH_MODERN } from '../../config/design-tokens.js';
+
+class AccountDashboard {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.createDashboardHTML();
+        this.bindEvents();
+        this.loadUserData();
+    }
+
+    createDashboardHTML() {
+        return `
+            <div id="account-dashboard" class="min-h-screen bg-[${EARTH_MODERN.colors.surface}]">
+                <!-- Header -->
+                <header class="bg-[${EARTH_MODERN.colors.surface}] shadow-sm">
+                    <div class="max-w-screen-2xl mx-auto px-6 py-4">
+                        <div class="flex justify-between items-center">
+                            <a href="../index.html" class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-2xl text-[${EARTH_MODERN.colors.primary}]">arrow_back</span>
+                                <span class="font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}]">Back to Sorro Brew</span>
+                            </a>
+                            
+                            <button id="logout-btn" class="px-4 py-2 text-[${EARTH_MODERN.colors.secondary}] hover:text-[${EARTH_MODERN.colors.primary}] transition-colors font-['Manrope']">
+                                <span class="material-symbols-outlined align-middle mr-2">logout</span>
+                                Logout
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Main Content -->
+                <main class="max-w-screen-2xl mx-auto px-6 py-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <!-- Sidebar -->
+                        <aside class="lg:col-span-1">
+                            <!-- User Profile Card -->
+                            <div class="earth-modern-card p-6 mb-6">
+                                <div class="text-center">
+                                    <div class="w-20 h-20 bg-[${EARTH_MODERN.colors.secondary}] rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="material-symbols-outlined text-3xl text-white">person</span>
+                                    </div>
+                                    <h2 id="user-name" class="font-['Manrope'] text-xl font-bold text-[${EARTH_MODERN.colors.primary}] mb-2">Loading...</h2>
+                                    <p id="user-email" class="text-[${EARTH_MODERN.colors.onSurfaceVariant}] mb-4">Loading...</p>
+                                    <div class="flex justify-center gap-2">
+                                        <span class="px-3 py-1 bg-[${EARTH_MODERN.colors.surfaceContainerLow}] text-xs font-['Manrope'] text-[${EARTH_MODERN.colors.secondary}] rounded">Premium Member</span>
+                                        <span class="px-3 py-1 bg-[${EARTH_MODERN.colors.tertiaryContainer}] text-xs font-['Manrope'] text-white rounded">Since 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Navigation Menu -->
+                            <nav class="space-y-2">
+                                <button class="account-nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-[${EARTH_MODERN.colors.surfaceContainerLow}] transition-colors font-['Be_Vietnam_Pro'] text-[${EARTH_MODERN.colors.onSurface}]" data-section="overview">
+                                    <span class="material-symbols-outlined align-middle mr-3">dashboard</span>
+                                    Overview
+                                </button>
+                                <button class="account-nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-[${EARTH_MODERN.colors.surfaceContainerLow}] transition-colors font-['Be_Vietnam_Pro'] text-[${EARTH_MODERN.colors.onSurface}]" data-section="orders">
+                                    <span class="material-symbols-outlined align-middle mr-3">shopping_bag</span>
+                                    My Orders
+                                </button>
+                                <button class="account-nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-[${EARTH_MODERN.colors.surfaceContainerLow}] transition-colors font-['Be_Vietnam_Pro'] text-[${EARTH_MODERN.colors.onSurface}]" data-section="subscription">
+                                    <span class="material-symbols-outlined align-middle mr-3">subscriptions</span>
+                                    Subscription
+                                </button>
+                                <button class="account-nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-[${EARTH_MODERN.colors.surfaceContainerLow}] transition-colors font-['Be_Vietnam_Pro'] text-[${EARTH_MODERN.colors.onSurface}]" data-section="wishlist">
+                                    <span class="material-symbols-outlined align-middle mr-3">favorite</span>
+                                    Wishlist
+                                </button>
+                                <button class="account-nav-item w-full text-left px-4 py-3 rounded-lg hover:bg-[${EARTH_MODERN.colors.surfaceContainerLow}] transition-colors font-['Be_Vietnam_Pro'] text-[${EARTH_MODERN.colors.onSurface}]" data-section="settings">
+                                    <span class="material-symbols-outlined align-middle mr-3">settings</span>
+                                    Settings
+                                </button>
+                            </nav>
+                        </aside>
+
+                        <!-- Content Area -->
+                        <div class="lg:col-span-3">
+                            <!-- Overview Section -->
+                            <section id="overview-section" class="account-section">
+                                <h1 class="font-['Manrope'] text-2xl font-bold text-[${EARTH_MODERN.colors.primary}] mb-6">Welcome back!</h1>
+                                
+                                <!-- Stats Grid -->
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                                    <div class="earth-modern-card p-6 text-center">
+                                        <span class="material-symbols-outlined text-4xl text-[${EARTH_MODERN.colors.secondary}] block mb-4">shopping_bag</span>
+                                        <div class="text-2xl font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}]" id="total-orders">0</div>
+                                        <p class="text-[${EARTH_MODERN.colors.onSurfaceVariant}]">Total Orders</p>
+                                    </div>
+                                    <div class="earth-modern-card p-6 text-center">
+                                        <span class="material-symbols-outlined text-4xl text-[${EARTH_MODERN.colors.secondary}] block mb-4">favorite</span>
+                                        <div class="text-2xl font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}]" id="wishlist-count">0</div>
+                                        <p class="text-[${EARTH_MODERN.colors.onSurfaceVariant}]">Wishlist Items</p>
+                                    </div>
+                                    <div class="earth-modern-card p-6 text-center">
+                                        <span class="material-symbols-outlined text-4xl text-[${EARTH_MODERN.colors.secondary}] block mb-4">subscriptions</span>
+                                        <div class="text-2xl font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}]" id="subscription-status">None</div>
+                                        <p class="text-[${EARTH_MODERN.colors.onSurfaceVariant}]">Subscription</p>
+                                    </div>
+                                </div>
+
+                                <!-- Recent Activity -->
+                                <div class="earth-modern-card p-6">
+                                    <h3 class="font-['Manrope'] text-lg font-bold text-[${EARTH_MODERN.colors.primary}] mb-4">Recent Activity</h3>
+                                    <div id="recent-activity" class="space-y-4">
+                                        <!-- Activity items will be inserted here -->
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Orders Section -->
+                            <section id="orders-section" class="account-section hidden">
+                                <h1 class="font-['Manrope'] text-2xl font-bold text-[${EARTH_MODERN.colors.primary}] mb-6">My Orders</h1>
+                                <div id="orders-list" class="space-y-4">
+                                    <!-- Orders will be inserted here -->
+                                </div>
+                            </section>
+
+                            <!-- Subscription Section -->
+                            <section id="subscription-section" class="account-section hidden">
+                                <h1 class="font-['Manrope'] text-2xl font-bold text-[${EARTH_MODERN.colors.primary}] mb-6">My Subscription</h1>
+                                <div class="earth-modern-card p-6">
+                                    <div id="subscription-details">
+                                        <!-- Subscription details will be inserted here -->
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Wishlist Section -->
+                            <section id="wishlist-section" class="account-section hidden">
+                                <h1 class="font-['Manrope'] text-2xl font-bold text-[${EARTH_MODERN.colors.primary}] mb-6">My Wishlist</h1>
+                                <div id="wishlist-items" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <!-- Wishlist items will be inserted here -->
+                                </div>
+                            </section>
+
+                            <!-- Settings Section -->
+                            <section id="settings-section" class="account-section hidden">
+                                <h1 class="font-['Manrope'] text-2xl font-bold text-[${EARTH_MODERN.colors.primary}] mb-6">Account Settings</h1>
+                                <div class="earth-modern-card p-6">
+                                    <form id="settings-form" class="space-y-6">
+                                        <div>
+                                            <label class="block font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}] mb-2">Display Name</label>
+                                            <input type="text" id="display-name" class="w-full px-4 py-3 bg-[${EARTH_MODERN.colors.surfaceContainerLow}] rounded-lg border border-[${EARTH_MODERN.colors.outlineVariant}] font-['Be_Vietnam_Pro'] text-[${EARTH_MODERN.colors.onSurface}]">
+                                        </div>
+                                        <div>
+                                            <label class="block font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}] mb-2">Email</label>
+                                            <input type="email" id="email" class="w-full px-4 py-3 bg-[${EARTH_MODERN.colors.surfaceContainerLow}] rounded-lg border border-[${EARTH_MODERN.colors.outlineVariant}] font-['Be_Vietnam_Pro'] text-[${EARTH_MODERN.colors.onSurface}]">
+                                        </div>
+                                        <div>
+                                            <label class="block font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}] mb-2">Theme Preference</label>
+                                            <select id="theme-preference" class="w-full px-4 py-3 bg-[${EARTH_MODERN.colors.surfaceContainerLow}] rounded-lg border border-[${EARTH_MODERN.colors.outlineVariant}] font-['Be_Vietnam_Pro'] text-[${EARTH_MODERN.colors.onSurface}]">
+                                                <option value="light">Light</option>
+                                                <option value="dark">Dark</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="w-full px-6 py-3 bg-[${EARTH_MODERN.colors.secondary}] text-white font-['Manrope'] font-bold rounded-lg hover:bg-[${EARTH_MODERN.colors.secondaryFixed}] transition-colors">
+                                            Save Settings
+                                        </button>
+                                    </form>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        `;
+    }
+
+    bindEvents() {
+        // Navigation
+        document.querySelectorAll('.account-nav-item').forEach(button => {
+            button.addEventListener('click', () => {
+                this.showSection(button.dataset.section);
+                this.updateActiveNav(button);
+            });
+        });
+
+        // Logout
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            sorroBrewState.logout();
+            window.location.href = '../index.html';
+        });
+
+        // Settings form
+        document.getElementById('settings-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.saveSettings();
+        });
+
+        // Subscribe to state changes
+        sorroBrewState.subscribe('user', (user) => {
+            this.updateUserInfo(user);
+        });
+
+        sorroBrewState.subscribe('subscription', (subscription) => {
+            this.updateSubscriptionInfo(subscription);
+        });
+    }
+
+    showSection(sectionName) {
+        // Hide all sections
+        document.querySelectorAll('.account-section').forEach(section => {
+            section.classList.add('hidden');
+        });
+
+        // Show selected section
+        const targetSection = document.getElementById(`${sectionName}-section`);
+        if (targetSection) {
+            targetSection.classList.remove('hidden');
+        }
+
+        sorroBrewState.setCurrentPage(sectionName);
+    }
+
+    updateActiveNav(activeButton) {
+        document.querySelectorAll('.account-nav-item').forEach(button => {
+            button.classList.remove('bg-[${EARTH_MODERN.colors.surfaceContainerLow}]', 'text-[${EARTH_MODERN.colors.primary}]');
+            button.classList.add('text-[${EARTH_MODERN.colors.onSurface}]');
+        });
+        
+        activeButton.classList.add('bg-[${EARTH_MODERN.colors.surfaceContainerLow}]', 'text-[${EARTH_MODERN.colors.primary}]');
+        activeButton.classList.remove('text-[${EARTH_MODERN.colors.onSurface}]');
+    }
+
+    loadUserData() {
+        const user = sorroBrewState.getUser();
+        if (user.isLoggedIn && user.profile) {
+            this.updateUserInfo(user);
+            this.loadMockData();
+        } else {
+            // Redirect to login if not logged in
+            window.location.href = '../login.html';
+        }
+    }
+
+    updateUserInfo(user) {
+        document.getElementById('user-name').textContent = user.profile.displayName || 'Sorro Brew Lover';
+        document.getElementById('user-email').textContent = user.profile.email;
+    }
+
+    loadMockData() {
+        // Mock data for demonstration
+        const mockOrders = [
+            {
+                id: 'SB-001',
+                date: '2024-03-15',
+                total: 74.97,
+                status: 'Delivered',
+                items: ['Sorro Brew Original x3']
+            },
+            {
+                id: 'SB-002',
+                date: '2024-02-28',
+                total: 28.99,
+                status: 'Shipped',
+                items: ['Signature Maicillo Horchata x1']
+            }
+        ];
+
+        const mockActivity = [
+            { type: 'order', description: 'Placed order SB-002', date: '2024-03-15' },
+            { type: 'wishlist', description: 'Added Limited Edition to wishlist', date: '2024-03-14' },
+            { type: 'login', description: 'Logged in from Vancouver', date: '2024-03-13' }
+        ];
+
+        this.renderOrders(mockOrders);
+        this.renderActivity(mockActivity);
+        this.updateStats(mockOrders, mockActivity);
+    }
+
+    renderOrders(orders) {
+        const ordersList = document.getElementById('orders-list');
+        ordersList.innerHTML = orders.map(order => `
+            <div class="earth-modern-card p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}]">Order ${order.id}</h3>
+                        <p class="text-[${EARTH_MODERN.colors.onSurfaceVariant}]">${order.date}</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-lg font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}]">$${order.total}</div>
+                        <span class="px-2 py-1 text-xs font-['Manrope'] rounded ${
+                            order.status === 'Delivered' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                        }">${order.status}</span>
+                    </div>
+                </div>
+                <div class="text-sm text-[${EARTH_MODERN.colors.onSurfaceVariant}]">
+                    ${order.items.join(', ')}
+                </div>
+            </div>
+        `).join('');
+    }
+
+    renderActivity(activity) {
+        const activityContainer = document.getElementById('recent-activity');
+        activityContainer.innerHTML = activity.map(item => `
+            <div class="flex items-center gap-4 p-3 hover:bg-[${EARTH_MODERN.colors.surfaceContainerLow}] rounded-lg transition-colors">
+                <span class="material-symbols-outlined text-[${EARTH_MODERN.colors.secondary}]">${
+                    item.type === 'order' ? 'shopping_bag' : 
+                    item.type === 'wishlist' ? 'favorite' : 'login'
+                }</span>
+                <div class="flex-1">
+                    <p class="font-['Be_Vietnam_Pro'] text-[${EARTH_MODERN.colors.onSurface}]">${item.description}</p>
+                    <p class="text-sm text-[${EARTH_MODERN.colors.onSurfaceVariant}]">${item.date}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    updateStats(orders, activity) {
+        document.getElementById('total-orders').textContent = orders.length;
+        document.getElementById('wishlist-count').textContent = activity.filter(a => a.type === 'wishlist').length;
+    }
+
+    updateSubscriptionInfo(subscription) {
+        const subscriptionDetails = document.getElementById('subscription-details');
+        
+        if (subscription.isActive) {
+            subscriptionDetails.innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}]">Current Plan:</span>
+                        <span class="text-[${EARTH_MODERN.colors.secondary}]">${subscription.plan}</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}]">Delivery:</span>
+                        <span class="text-[${EARTH_MODERN.colors.secondary}]">${subscription.deliveryFrequency}</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-['Manrope'] font-bold text-[${EARTH_MODERN.colors.primary}]">Next Delivery:</span>
+                        <span class="text-[${EARTH_MODERN.colors.secondary}]">${new Date(subscription.nextDeliveryDate).toLocaleDateString()}</span>
+                    </div>
+                    <button onclick="window.cancelSubscription()" class="w-full px-6 py-3 bg-red-600 text-white font-['Manrope'] font-bold rounded-lg hover:bg-red-700 transition-colors">
+                        Cancel Subscription
+                    </button>
+                </div>
+            `;
+            
+            document.getElementById('subscription-status').textContent = subscription.plan;
+        } else {
+            subscriptionDetails.innerHTML = `
+                <div class="text-center py-8">
+                    <span class="material-symbols-outlined text-4xl text-[${EARTH_MODERN.colors.secondary}] block mb-4">subscriptions</span>
+                    <p class="text-[${EARTH_MODERN.colors.onSurfaceVariant}] mb-4">No active subscription</p>
+                    <button onclick="window.startSubscription()" class="px-6 py-3 bg-[${EARTH_MODERN.colors.secondary}] text-white font-['Manrope'] font-bold rounded-lg hover:bg-[${EARTH_MODERN.colors.secondaryFixed}] transition-colors">
+                        Start Subscription
+                    </button>
+                </div>
+            `;
+        }
+    }
+
+    saveSettings() {
+        const displayName = document.getElementById('display-name').value;
+        const email = document.getElementById('email').value;
+        const theme = document.getElementById('theme-preference').value;
+
+        sorroBrewState.updateUserPreferences({
+            displayName,
+            email,
+            theme
+        });
+
+        sorroBrewState.showNotification('Settings saved successfully!');
+    }
+}
+
+// Global functions
+window.cancelSubscription = () => {
+    sorroBrewState.cancelSubscription();
+};
+
+window.startSubscription = () => {
+    window.location.href = '../subscribe.html';
+};
+
+// Initialize dashboard
+document.addEventListener('DOMContentLoaded', () => {
+    new AccountDashboard();
+});
+</script>
+<style>
+.earth-modern-card {
+    background: #fefccf;
+    border-radius: 12px;
+    box-shadow: 0 12px 60px rgba(29, 29, 3, 0.06);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.earth-modern-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 80px rgba(29, 29, 3, 0.12);
+}
+.account-section {
+    animation: fadeIn 0.3s ease-in-out;
+}
+.account-nav-item {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+</body>
+</html>

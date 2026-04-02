@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Page Not Found | Sorro Brew</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+.earth-modern-card {
+    background: #fefccf;
+    border-radius: 12px;
+    box-shadow: 0 12px 60px rgba(29, 29, 3, 0.06);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.earth-modern-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 80px rgba(29, 29, 3, 0.12);
+}
+</style>
+</head>
+<body class="bg-[#fefccf] text-[#1d1d03] font-['Be_Vietnam_Pro'] min-h-screen flex items-center justify-center px-8">
+<div class="max-w-2xl w-full text-center">
+<div class="earth-modern-card p-12">
+<div class="w-24 h-24 bg-[#e6e5b9] rounded-full flex items-center justify-center mx-auto mb-8">
+<span class="material-symbols-outlined text-5xl text-[#735c00]">search_off</span>
+</div>
+<h1 class="font-['Manrope'] text-4xl md:text-5xl font-bold text-[#271310] mb-6">Page Not Found</h1>
+<p class="text-xl text-[#504442] mb-8 leading-relaxed">
+Oops! The page you're looking for seems to have wandered off like coffee beans in a storm.
+</p>
+<div class="space-y-4">
+<a href="index.html" class="inline-flex items-center gap-2 px-8 py-4 bg-[#735c00] text-white font-['Manrope'] font-bold rounded-lg hover:bg-[#e9c349] transition-all transform hover:scale-105">
+<span class="material-symbols-outlined">home</span>
+Return to Sorro Brew Home
+</a>
+</div>
+<div class="mt-12 pt-8 border-t border-[#e6e5b9]">
+<h3 class="font-['Manrope'] text-lg font-bold text-[#271310] mb-4">Looking for something specific?</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+<a href="stitch_sorro_brew_landing_page/sorro_brew_landing_page/code.html" class="flex items-center gap-3 p-4 hover:bg-[#f8f6c9] rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[#735c00]">coffee</span>
+<span>Main Landing Page</span>
+</a>
+<a href="stitch_sorro_brew_landing_page/sorro_brew_cafe_menu_order/code.html" class="flex items-center gap-3 p-4 hover:bg-[#f8f6c9] rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[#735c00]">restaurant_menu</span>
+<span>Menu & Ordering</span>
+</a>
+<a href="stitch_sorro_brew_landing_page/our_story_the_sorro_brew_journey/code.html" class="flex items-center gap-3 p-4 hover:bg-[#f8f6c9] rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[#735c00]">auto_stories</span>
+<span>Our Story</span>
+</a>
+<a href="stitch_sorro_brew_landing_page/health_benefits_comparison/code.html" class="flex items-center gap-3 p-4 hover:bg-[#f8f6c9] rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[#735c00]">favorite</span>
+<span>Health Benefits</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+// Add some interactivity
+document.addEventListener('DOMContentLoaded', function() {
+    // Add search functionality
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.placeholder = 'Search Sorro Brew...';
+    searchInput.className = 'w-full mt-8 p-4 border border-[#e6e5b9] rounded-lg font-['Be_Vietnam_Pro'] text-[#271310] placeholder-[#504442]';
+    
+    const searchForm = document.createElement('form');
+    searchForm.appendChild(searchInput);
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = searchInput.value.trim();
+        if (query) {
+            // Redirect to main page with search parameter
+            window.location.href = `index.html?search=${encodeURIComponent(query)}`;
+        }
+    });
+    
+    document.querySelector('.earth-modern-card').appendChild(searchForm);
+});
+</script>
+</body>
+</html>

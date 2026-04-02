@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Be+Vietnam+Pro:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#ffe088",
+              "surface-container-high": "#eceabe",
+              "secondary-fixed-dim": "#e9c349",
+              "inverse-primary": "#e3beb8",
+              "surface-variant": "#e6e5b9",
+              "on-tertiary-container": "#ae8d81",
+              "surface-container-low": "#f8f6c9",
+              "surface-container-highest": "#e6e5b9",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#2b1613",
+              "background": "#fefccf",
+              "outline-variant": "#d3c3c0",
+              "surface": "#fefccf",
+              "on-tertiary-fixed": "#2b160f",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-background": "#1d1d03",
+              "surface-dim": "#dedcb1",
+              "on-secondary": "#ffffff",
+              "surface-container": "#f2f0c4",
+              "on-secondary-fixed-variant": "#574500",
+              "on-surface-variant": "#504442",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#f5f3c7",
+              "surface-tint": "#745853",
+              "primary-fixed-dim": "#e3beb8",
+              "tertiary-fixed": "#ffdbce",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#fed65b",
+              "error-container": "#ffdad6",
+              "primary-fixed": "#ffdad4",
+              "inverse-surface": "#323214",
+              "on-tertiary-fixed-variant": "#5b4137",
+              "tertiary-container": "#3e271e",
+              "tertiary": "#27130b",
+              "primary-container": "#3e2723",
+              "outline": "#827472",
+              "on-primary-container": "#ae8d87",
+              "on-surface": "#1d1d03",
+              "on-error-container": "#93000a",
+              "secondary": "#735c00",
+              "on-primary-fixed-variant": "#5b403c",
+              "tertiary-fixed-dim": "#e4beb2",
+              "surface-bright": "#fefccf",
+              "primary": "#271310",
+              "on-secondary-container": "#745c00",
+              "on-secondary-fixed": "#241a00",
+              "harvest-gold": "#D4AF37",
+              "coffee-deep": "#3E2723",
+              "cream-light": "#FFFDD0"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(254, 252, 207, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .ambient-shadow {
+            shadow-color: #1d1d03;
+            box-shadow: 0 12px 60px rgba(29, 29, 3, 0.06);
+        }
+        .heritage-badge {
+            position: absolute;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="bg-[#fefccf] dark:bg-[#1d1d03] sticky top-0 z-50 border-b-0">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-[#271310] dark:text-[#fefccf] font-headline tracking-tight">Sorro Brew</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#3e2723] dark:text-[#e6e5b9] opacity-80 pb-1 font-headline font-bold tracking-tight hover:text-[#735c00] transition-colors duration-300" href="#">Market Data</a>
+<a class="text-[#735c00] dark:text-[#fed65b] border-b-2 border-[#735c00] pb-1 font-headline font-bold tracking-tight" href="#">Business Case</a>
+<a class="text-[#3e2723] dark:text-[#e6e5b9] opacity-80 pb-1 font-headline font-bold tracking-tight hover:text-[#735c00] transition-colors duration-300" href="#">Sustainability</a>
+<a class="text-[#3e2723] dark:text-[#e6e5b9] opacity-80 pb-1 font-headline font-bold tracking-tight hover:text-[#735c00] transition-colors duration-300" href="#">Team</a>
+<a class="text-[#3e2723] dark:text-[#e6e5b9] opacity-80 pb-1 font-headline font-bold tracking-tight hover:text-[#735c00] transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded font-headline font-bold text-sm tracking-wide hover:bg-gradient-to-r from-secondary to-[#5a4800] transition-all duration-300">
+            Investor Login
+        </button>
+</div>
+<div class="bg-[#e6e5b9] dark:bg-[#2b2b05] h-px w-full opacity-20"></div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[870px] flex items-center overflow-hidden px-12 pt-12">
+<div class="grid lg:grid-cols-2 gap-12 max-w-screen-2xl mx-auto w-full items-center">
+<div class="z-10">
+<span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary-container text-on-secondary-container font-label text-[0.7rem] uppercase tracking-[0.2em] font-bold">Investment Opportunity 2024</span>
+<h1 class="text-display-lg text-6xl md:text-8xl font-headline font-black text-primary leading-[1] mb-8 tracking-tighter">
+                The Next <br/><span class="text-secondary italic">Heritage</span> Giant
+            </h1>
+<p class="text-body-lg text-xl text-on-surface-variant max-w-lg mb-10 leading-relaxed opacity-90">
+                Sorro Brew is redefining the beverage industry by bridging Salvadoran ancestral resilience with Vancouver's thriving wellness market. A sustainable, high-growth investment in regenerative agriculture and coffee alternatives.
+            </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-headline font-bold tracking-tight scale-95 hover:scale-100 transition-transform">Download Prospectus</button>
+<button class="px-8 py-4 text-primary font-headline font-bold tracking-tight border-b-2 border-secondary-container">View Impact Metrics</button>
+</div>
+</div>
+<div class="relative h-[600px] hidden lg:block">
+<div class="absolute inset-0 bg-surface-container-high rounded-sm rotate-2 translate-x-4 translate-y-4"></div>
+<img class="absolute inset-0 w-full h-full object-cover rounded-sm ambient-shadow" data-alt="close-up of rich golden sorghum grains in a dark ceramic bowl with warm dramatic side lighting and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQuCCAxGZzXOzgxqCyzkFbwaPFrn-GfLAu8rjj98PlrykdwFLURGvO5u5N-oY_17UACIDwWj77BWITdupSDUPjOwPO6KgxX5fhL8pN5DsXbLqHXcMsV3sZj0qMXjxXkgmhTCHYgS-EfCclexenK3PSo9SMucsuPgaxKNl6knGVwOK3pdxF5YOzn7TAWdRqKmOgRY174ZFVpx9Ewmp-Td2k4kpSgozxVGbxMA_mkc5KW5PBl28oLzPPVc6iNeUKZCg3dKTEqrXTzeI"/>
+<div class="heritage-badge bottom-[-20px] left-[-20px] w-32 h-32 rounded-full bg-secondary-container flex items-center justify-center text-center p-4 shadow-xl">
+<span class="font-label font-bold text-xs text-on-secondary-container tracking-wider uppercase">Maicillo Rooted</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Market Viability (Vancouver, BC) -->
+<section class="py-32 px-12 bg-surface-container-low overflow-hidden">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid lg:grid-cols-3 gap-16 items-start">
+<div class="lg:col-span-1">
+<h2 class="text-4xl font-headline font-black text-primary mb-6 tracking-tight">The Vancouver Bridge</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                    Vancouver represents the global epicenter of wellness culture. Our strategic 'Bridge' connects Salvadoran production efficiency directly to British Columbia's premium consumer segment.
+                </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">trending_up</span>
+<div>
+<h4 class="font-headline font-bold text-primary">40% Market Growth</h4>
+<p class="text-sm opacity-70">Annual growth in BC's caffeine-free sector</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">location_on</span>
+<div>
+<h4 class="font-headline font-bold text-primary">Strategic Hub</h4>
+<p class="text-sm opacity-70">Direct distribution from Port of Vancouver</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Infographic Card 1 -->
+<div class="bg-surface-container-lowest p-10 ambient-shadow relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container opacity-10 rounded-bl-full group-hover:scale-110 transition-transform"></div>
+<span class="font-label text-xs tracking-widest text-secondary font-bold uppercase mb-4 block">Regional Data</span>
+<div class="text-6xl font-headline font-black text-primary mb-2">40%</div>
+<p class="text-body-lg text-on-surface-variant mb-6">Growth in alternative wellness adoption across Metro Vancouver in the last 24 months.</p>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[40%]"></div>
+</div>
+</div>
+<!-- Infographic Card 2 -->
+<div class="bg-primary text-on-primary p-10 ambient-shadow relative overflow-hidden">
+<span class="font-label text-xs tracking-widest text-secondary-container font-bold uppercase mb-4 block">Target Demographic</span>
+<div class="text-4xl font-headline font-bold mb-4">68% of BC Consumers</div>
+<p class="opacity-70 text-sm leading-relaxed">Active seekers of ethically-sourced, caffeine-free alternatives with verified heritage origins.</p>
+<div class="mt-8 flex gap-1">
+<div class="h-12 w-3 bg-secondary-container"></div>
+<div class="h-12 w-3 bg-secondary-container opacity-80"></div>
+<div class="h-12 w-3 bg-secondary-container opacity-60"></div>
+<div class="h-12 w-3 bg-secondary-container opacity-40"></div>
+<div class="h-12 w-3 bg-secondary-container opacity-20"></div>
+</div>
+</div>
+<div class="md:col-span-2 h-80 relative">
+<img class="w-full h-full object-cover rounded-sm brightness-75" data-alt="Modern Vancouver skyline at twilight reflecting off the water with soft teal and orange hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnO8yv95hi57D_rpgrHuDZ3QOZXmDAnmGdoZin2i3OBP-kPYww4mRu-JLCmvWviBCBs-nGtXCafRRr88jZJrjWs_OmVBoWlSKFH9iX77cNeNZWmvTNIutcYWiXyCjyP3agjcfZHl8cW30bUK7WjIXZOuAReEODrhZWoT5RfYvMqp_g0ZlHiOJ4pUvY9jSCFCillmHS69engsrn-GMfBA8nqOy577rCz8AXkto0_L6pooIsEOKSWX3L7cJJ-Xb2OQabM5tjT2NDsTM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<p class="text-white font-headline font-bold text-lg">Market Entry Point: Gastown, Vancouver</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cost Effectiveness Section -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-screen-2xl mx-auto">
+<div class="text-center mb-20">
+<span class="font-label text-xs tracking-[0.3em] font-bold text-secondary uppercase">Comparative Economics</span>
+<h2 class="text-5xl font-headline font-black text-primary mt-4">Resilient Margins by Design</h2>
+</div>
+<div class="grid lg:grid-cols-2 gap-px bg-outline-variant/10 rounded-sm overflow-hidden">
+<div class="bg-surface-container-lowest p-16">
+<div class="flex items-center gap-4 mb-10">
+<div class="p-3 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-secondary text-3xl">water_drop</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary">Water Stewardship</h3>
+</div>
+<div class="flex justify-between items-end mb-4">
+<span class="text-sm font-label font-bold text-on-surface-variant uppercase">Traditional Coffee</span>
+<span class="text-xl font-headline font-bold text-primary">100% (Baseline)</span>
+</div>
+<div class="h-4 bg-surface-container rounded-full mb-8">
+<div class="h-full bg-outline w-full rounded-full"></div>
+</div>
+<div class="flex justify-between items-end mb-4">
+<span class="text-sm font-label font-bold text-secondary uppercase">Sorro Maicillo</span>
+<span class="text-xl font-headline font-bold text-secondary">60% Usage</span>
+</div>
+<div class="h-4 bg-surface-container rounded-full mb-10">
+<div class="h-full bg-secondary w-[60%] rounded-full"></div>
+</div>
+<p class="text-body-lg text-on-surface-variant">Maicillo requires 40% less water than traditional Arabica beans, drastically reducing operational overhead and climate-related risk.</p>
+</div>
+<div class="bg-surface-container-lowest p-16">
+<div class="flex items-center gap-4 mb-10">
+<div class="p-3 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-secondary text-3xl">thermostat</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary">Climate Resilience</h3>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="text-4xl font-headline font-black text-primary mb-2">32°C</div>
+<p class="text-xs font-label uppercase font-bold text-on-surface-variant">Max Yield Threshold</p>
+</div>
+<div class="pt-2">
+<p class="text-sm leading-relaxed">Unlike coffee, which suffers above 23°C, sorghum thrives in heat, ensuring supply chain stability through 2030+ climate projections.</p>
+</div>
+</div>
+<div class="mt-12 bg-surface-container p-6 rounded-sm">
+<p class="text-sm font-headline font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                        Projected EBITDA Margin: 34% by Q4 2025
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Farming Practices & ESG -->
+<section class="py-32 px-12 bg-primary-container text-on-primary">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-20 items-center">
+<div class="lg:w-1/2 relative">
+<img class="w-full h-[500px] object-cover rounded-sm grayscale-[30%] brightness-90" data-alt="Wide scenic view of golden rolling fields in El Salvador during sunrise with mist in the valleys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeAF_5OSaVmQdIcSSL9qG1Mld8cfDDn71FmfrB6EiKkG8lZrd86s-gBiZsR4gLkHVqi_jaoK3nna7e8CWtNxQu3JPnHrKGwKS2tpngp0hcWEW6ajT2eaAZWjivtCwq8VUx-SmCN2UZLF6WkvfHcdAvFK-QibG83LxEaTgMHXN38jZ6lhO6sW9uqWLVkrNGQLZrVOwVZ5IzIf2D6pNiZ32oKP6cCNYNdpjEScbcjcFTyx4l4UQAzXDC86CiFmFWu0nA8LC5RPAWAjg"/>
+<div class="absolute -bottom-10 -right-10 bg-secondary-container text-on-secondary-container p-8 max-w-xs ambient-shadow hidden md:block">
+<h4 class="font-headline font-black text-2xl mb-2">Regenerative Ancestry</h4>
+<p class="text-sm leading-relaxed opacity-90">Our farming practices restore 2.4lbs of carbon per pound of grain produced.</p>
+</div>
+</div>
+<div class="lg:w-1/2">
+<span class="font-label text-xs tracking-widest text-secondary-fixed font-bold uppercase mb-4 block">ESG Strategy</span>
+<h2 class="text-5xl font-headline font-black text-surface-bright mb-10 leading-tight">Empowering Land &amp; Legacy</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="text-secondary-fixed font-headline font-black text-4xl">01</div>
+<div>
+<h3 class="text-xl font-headline font-bold mb-2">Direct-Trade Equity</h3>
+<p class="text-on-primary-container leading-relaxed">We cut out three layers of middle-men, ensuring 45% more profit stays with our Salvadoran farming cooperatives.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="text-secondary-fixed font-headline font-black text-4xl">02</div>
+<div>
+<h3 class="text-xl font-headline font-bold mb-2">Soil Restoration</h3>
+<p class="text-on-primary-container leading-relaxed">Nitrogen-fixing crop rotation protocols have restored topsoil health across 4,200 acres in the Usulután region.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="text-secondary-fixed font-headline font-black text-4xl">03</div>
+<div>
+<h3 class="text-xl font-headline font-bold mb-2">Zero-Waste Processing</h3>
+<p class="text-on-primary-container leading-relaxed">Maicillo stalks are converted into organic fertilizer and sustainable packaging materials for local markets.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Impact Section (New) -->
+<section class="py-32 px-12 bg-cream-light overflow-hidden">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<span class="font-label text-xs tracking-[0.3em] font-bold text-harvest-gold uppercase mb-6 block">Our Social Pulse</span>
+<h2 class="text-5xl font-headline font-black text-coffee-deep mb-8 leading-tight">Elevating Salvadoran <span class="italic text-harvest-gold">Families</span></h2>
+<p class="text-body-lg text-coffee-deep/80 leading-relaxed mb-12">
+                    Sorro Brew isn't just a beverage; it's a movement of restoration. Through our Direct-Trade Cultivation Programs, we bypass traditional exploitation models to put real equity back into the hands of those who tend the soil. We are reviving ancestral Maicillo traditions to create a future defined by dignity and growth.
+                </p>
+<div class="grid grid-cols-2 gap-8">
+<div class="bg-white p-8 border-l-4 border-harvest-gold shadow-sm">
+<div class="text-4xl font-headline font-black text-coffee-deep mb-2">300+</div>
+<p class="text-xs font-label uppercase font-bold text-coffee-deep/60 tracking-wider">Smallholder Families Empowered</p>
+</div>
+<div class="bg-white p-8 border-l-4 border-harvest-gold shadow-sm">
+<div class="text-4xl font-headline font-black text-coffee-deep mb-2">40%</div>
+<p class="text-xs font-label uppercase font-bold text-coffee-deep/60 tracking-wider">Increase in Local Household Income</p>
+</div>
+<div class="bg-white p-8 border-l-4 border-harvest-gold shadow-sm">
+<div class="text-4xl font-headline font-black text-coffee-deep mb-2">12k+</div>
+<p class="text-xs font-label uppercase font-bold text-coffee-deep/60 tracking-wider">Hectares Protected by Direct Trade</p>
+</div>
+<div class="bg-white p-8 border-l-4 border-harvest-gold shadow-sm">
+<div class="text-4xl font-headline font-black text-coffee-deep mb-2">100%</div>
+<p class="text-xs font-label uppercase font-bold text-coffee-deep/60 tracking-wider">Zero-Child-Labor Certification</p>
+</div>
+</div>
+</div>
+<div class="relative order-1 lg:order-2">
+<div class="relative z-10 grid grid-cols-2 gap-4">
+<img class="w-full h-80 object-cover rounded shadow-lg translate-y-8" data-alt="Portrait of a smiling Salvadoran farmer in a sun-drenched field holding a handful of golden maicillo grains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBK7p8V_O5r-zC2m6u9w6rU2_WzJ_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W_W"/>
+<img class="w-full h-80 object-cover rounded shadow-lg" data-alt="Community gathering in a rural Salvadoran village with families sharing a meal outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9"/>
+</div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-harvest-gold/20 rounded-full blur-3xl -z-0"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border border-harvest-gold/30 rounded rotate-6 -z-0"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Investment CTA -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-4xl mx-auto">
+<div class="bg-surface-container-lowest p-12 md:p-20 ambient-shadow">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline font-black text-primary mb-4">Partner in Our Growth</h2>
+<p class="text-on-surface-variant">Request a confidential investment packet and join our next funding round.</p>
+</div>
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant mb-2">Full Name</label>
+<input class="w-full bg-surface-container-low border-none focus:bg-surface-container-lowest transition-colors p-4 focus:ring-1 focus:ring-secondary/20" placeholder="Alexander Graham" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant mb-2">Investment Firm</label>
+<input class="w-full bg-surface-container-low border-none focus:bg-surface-container-lowest transition-colors p-4 focus:ring-1 focus:ring-secondary/20" placeholder="Acme Capital" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant mb-2">Professional Email</label>
+<input class="w-full bg-surface-container-low border-none focus:bg-surface-container-lowest transition-colors p-4 focus:ring-1 focus:ring-secondary/20" placeholder="alex@firm.com" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant mb-2">Inquiry Intent</label>
+<select class="w-full bg-surface-container-low border-none focus:bg-surface-container-lowest transition-colors p-4 focus:ring-1 focus:ring-secondary/20">
+<option>Series A Funding</option>
+<option>Impact Partnership</option>
+<option>Supply Chain Inquiry</option>
+</select>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-headline font-bold py-5 rounded-lg text-lg hover:bg-gradient-to-r from-secondary to-[#5a4800] transition-all shadow-lg" type="submit">Submit Request</button>
+</form>
+<div class="mt-16 pt-12 border-t border-outline-variant/30 flex flex-wrap justify-center gap-8">
+<a class="flex items-center gap-2 text-primary font-headline font-bold text-sm" href="#">
+<span class="material-symbols-outlined text-secondary">description</span> SEC Filings
+                </a>
+<a class="flex items-center gap-2 text-primary font-headline font-bold text-sm" href="#">
+<span class="material-symbols-outlined text-secondary">bar_chart</span> Annual Report 2023
+                </a>
+<a class="flex items-center gap-2 text-primary font-headline font-bold text-sm" href="#">
+<span class="material-symbols-outlined text-secondary">eco</span> Impact Metrics
+                </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#271310] dark:bg-[#000000] py-16 px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-screen-2xl mx-auto">
+<div>
+<div class="text-lg font-bold text-[#fed65b] font-headline mb-6">Sorro Brew</div>
+<p class="font-['Be_Vietnam_Pro'] font-light leading-relaxed text-sm text-[#fefccf] opacity-60">
+                Salvadoran Heritage, Modern Wellness. Bridging ancestral grains with contemporary global demand.
+            </p>
+</div>
+<div>
+<h5 class="text-[#fefccf] font-headline font-bold mb-6 text-sm uppercase tracking-widest">Resources</h5>
+<ul class="space-y-4">
+<li><a class="font-['Be_Vietnam_Pro'] font-light text-sm text-[#fefccf] opacity-60 hover:opacity-100 hover:text-[#fed65b] transition-opacity" href="#">SEC Filings</a></li>
+<li><a class="font-['Be_Vietnam_Pro'] font-light text-sm text-[#fefccf] opacity-60 hover:opacity-100 hover:text-[#fed65b] transition-opacity" href="#">Annual Report</a></li>
+<li><a class="font-['Be_Vietnam_Pro'] font-light text-sm text-[#fefccf] opacity-60 hover:opacity-100 hover:text-[#fed65b] transition-opacity" href="#">Impact Metrics</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[#fefccf] font-headline font-bold mb-6 text-sm uppercase tracking-widest">Legal</h5>
+<ul class="space-y-4">
+<li><a class="font-['Be_Vietnam_Pro'] font-light text-sm text-[#fefccf] opacity-60 hover:opacity-100 hover:text-[#fed65b] transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="font-['Be_Vietnam_Pro'] font-light text-sm text-[#fefccf] opacity-60 hover:opacity-100 hover:text-[#fed65b] transition-opacity" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="flex flex-col justify-between">
+<div>
+<h5 class="text-[#fefccf] font-headline font-bold mb-6 text-sm uppercase tracking-widest">Follow Our Journey</h5>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#fed65b] cursor-pointer">public</span>
+<span class="material-symbols-outlined text-[#fed65b] cursor-pointer">mail</span>
+<span class="material-symbols-outlined text-[#fed65b] cursor-pointer">finance</span>
+</div>
+</div>
+<p class="font-['Be_Vietnam_Pro'] font-light text-xs text-[#fefccf] opacity-60 mt-12">
+                © 2024 Sorro Brew. Salvadoran Heritage, Modern Wellness.
+            </p>
+</div>
+</div>
+</footer>
+</body></html>

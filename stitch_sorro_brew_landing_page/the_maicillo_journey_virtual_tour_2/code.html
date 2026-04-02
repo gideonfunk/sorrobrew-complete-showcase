@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e6e5b9",
+              "secondary-fixed": "#ffe088",
+              "on-tertiary-container": "#ae8d81",
+              "tertiary-fixed": "#ffdbce",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#2b1613",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed": "#241a00",
+              "on-background": "#1d1d03",
+              "surface-bright": "#fefccf",
+              "on-surface-variant": "#504442",
+              "on-primary-fixed-variant": "#5b403c",
+              "tertiary-fixed-dim": "#e4beb2",
+              "primary-container": "#3e2723",
+              "surface-container-high": "#eceabe",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f8f6c9",
+              "surface-tint": "#745853",
+              "surface-container": "#f2f0c4",
+              "primary": "#271310",
+              "inverse-surface": "#323214",
+              "primary-fixed": "#ffdad4",
+              "secondary": "#735c00",
+              "surface-variant": "#e6e5b9",
+              "tertiary-container": "#3e271e",
+              "inverse-on-surface": "#f5f3c7",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#ae8d87",
+              "secondary-fixed-dim": "#e9c349",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#2b160f",
+              "tertiary": "#27130b",
+              "on-surface": "#1d1d03",
+              "background": "#fefccf",
+              "on-secondary-container": "#745c00",
+              "on-error-container": "#93000a",
+              "surface": "#fefccf",
+              "error": "#ba1a1a",
+              "surface-dim": "#dedcb1",
+              "inverse-primary": "#e3beb8",
+              "on-tertiary-fixed-variant": "#5b4137",
+              "outline": "#827472",
+              "secondary-container": "#fed65b",
+              "primary-fixed-dim": "#e3beb8",
+              "on-secondary-fixed-variant": "#574500",
+              "outline-variant": "#d3c3c0"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .editorial-asymmetry-right {
+            margin-right: -5rem;
+        }
+        .glass-header {
+            background: rgba(254, 252, 207, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 glass-header flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-2xl font-extrabold tracking-tighter text-primary font-headline">Sorro Brew</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-headline font-bold tracking-tight text-primary hover:text-secondary transition-all duration-300" href="#">Our Story</a>
+<a class="font-headline font-bold tracking-tight text-secondary border-b-2 border-secondary-container pb-1" href="#">Impact</a>
+<a class="font-headline font-bold tracking-tight text-primary hover:text-secondary transition-all duration-300" href="#">Brew Guide</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="transition-all duration-300 hover:opacity-70 active:scale-95">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+</button>
+<button class="transition-all duration-300 hover:opacity-70 active:scale-95">
+<span class="material-symbols-outlined text-primary">person</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="cinematic wide drone shot of rolling emerald green hills in El Salvador at sunrise with mist clinging to the volcanic peaks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB5__UprA4iuBgxB9muZ8c_zVxJG4HqRxY-Mx7yZYDOL9U8bfrnpgVg7siWB8tOCZZXheO38rx-RorklIpaCAXqx4jpjIEBnG34ukIWrUb8D3auKcSarypAUPv8KBt1GvxG6j03CwO02E0mGEHkH9xKd8Yss3V0XisY07wcdcVqsIN9fHnF6PRczMe8VwtAr-aBtQ8mELjuhXgASmXoFZDO6esmdoIFAjr1R1dz963Ei61p5SD8ZIwNtmiT5gHPm2_07b8B_eOup4"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<span class="inline-block px-4 py-1 mb-6 text-xs font-label font-bold tracking-widest uppercase bg-secondary-container text-on-secondary-container rounded-full">The Maicillo Journey</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-surface-container-lowest leading-[1.1] tracking-tighter mb-8">
+                    From Ancestral Soil <br/> to Your Soul
+                </h1>
+<p class="text-surface-bright text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                    Discover the resilient heart of El Salvador through the ancient grain that sustains generations.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+<button class="px-8 py-4 bg-secondary text-on-secondary font-headline font-bold rounded-md hover:bg-gradient-to-r hover:from-secondary hover:to-primary-container transition-all duration-300 shadow-xl">Begin the Tour</button>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-surface-bright text-3xl">expand_more</span>
+</div>
+</section>
+<!-- Section 2: The Origin -->
+<section class="py-24 px-8 md:px-24 bg-surface grid grid-cols-1 md:grid-cols-12 gap-12 items-center overflow-hidden">
+<div class="md:col-span-5 relative">
+<div class="absolute -top-6 -left-6 w-24 h-24 bg-secondary-container rounded-full flex items-center justify-center z-10 shadow-lg">
+<span class="text-on-secondary-container font-label font-black text-xs text-center leading-tight uppercase tracking-tighter">Salvadoran<br/>Heritage</span>
+</div>
+<img class="w-full h-[600px] object-cover rounded-sm shadow-2xl" data-alt="vintage sepia toned close-up of sun-dried maicillo grains in a hand-woven artisan basket on a rustic wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8ERmixITf9hTUvb_-QaSefPdKEMyTVuk2E9_aweBcawI10Re7ldEJYutIkEh8x24NPJM1PjsE_BVA7Dw-tfmc9nTBUmFnYGxMJy6c6LGI4J87VKzRjslkNLUQ0NU4Vd1CUUSvhdJ_X5baZTyL7Gb_ZUXzCy46KUDzxui4B9dEQk4pFSJ0c_jQl8raHKksI-Xe0oLpsY_6H2cdM8YvlZInLYg9-BY8N3Ud9LlQiR04eKuypkZv3knTU7gPthaLxF1kwfXz08_X_4I"/>
+</div>
+<div class="md:col-span-7 md:pl-12">
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">Rooted in Resilience</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed text-lg font-light">
+<p>Before the coffee trees arrived, the Maicillo flourished. Known as the "grain of the sun," this hardy ancestral sorghum has anchored Salvadoran agriculture for centuries, thriving in volcanic soil where others might falter.</p>
+<p>It was never just a crop; it was a communal pulse. From the 'atol de maicillo' shared at sunrise to the roasted seeds brewed by mountain families during lean harvests, it represents a lineage of self-sufficiency and deep respect for the land.</p>
+<p class="italic text-primary font-medium border-l-4 border-secondary-container pl-6 py-2">"Maicillo doesn't just grow; it waits. It endures the dry season to offer its gold when the rains return."</p>
+</div>
+</div>
+</section>
+<!-- Section 3: Regenerative Farming (Bento-style Grid) -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="font-label text-xs font-bold tracking-widest text-secondary uppercase mb-4 block">Our Stewardship</span>
+<h2 class="font-headline text-4xl font-extrabold text-primary leading-tight">Regenerative Harmony</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm font-light">Moving beyond sustainability into active restoration of our ancestral highlands.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Bento Item 1 -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-sm">
+<img class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-700" data-alt="wide angle shot of lush green terraced hills in El Salvador with sustainable maicillo crops under a soft overcast sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0UXuWDcojbJEFXjKMn528F43GcBO6Q4eSDL7aa3CG35SaVYY4-2vE7yTFUmWpWLIMdP-Dwmalf23UOm6_czEDIewiUGj73LrAfDoVD408Gzpp0zjM3Z9MoPCMj4YksSmHc2Xt4yjCTWFnyMnu06iH0imnsdSdjqsSRDsjwD2ZgTWXtosd2CfkAUGP9rGe22M3pc9Dq6OEeWCGTfZv3cR2gCYtu5u6SJKsSFx0nQAldm9lfcJTj7IPwWMkFyLRRHc1IGvknBJZKHs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
+<div class="text-surface-bright">
+<h3 class="font-headline text-2xl font-bold mb-2">Soil Restoration</h3>
+<p class="text-sm opacity-90 max-w-md">Our farmers use traditional multi-cropping techniques that naturally replenish nitrogen levels without synthetic intervention.</p>
+</div>
+</div>
+</div>
+<!-- Bento Item 2 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-center border border-outline-variant/15">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">water_drop</span>
+<h3 class="font-headline text-2xl font-bold text-primary mb-4">Zero Waste Hydration</h3>
+<p class="text-on-surface-variant font-light">Maicillo requires 40% less water than traditional coffee beans, preserving local mountain springs for the communities that guard them.</p>
+</div>
+<!-- Bento Item 3 -->
+<div class="bg-primary text-surface-bright p-8 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4">Ethical Ecosystems</h3>
+<p class="text-on-primary-container font-light">We pay 30% above market rate directly to smallholder collectives, ensuring the 'Maicillo Economy' thrives for generations.</p>
+</div>
+<a class="text-secondary-container font-headline font-bold flex items-center gap-2 mt-8 hover:opacity-80 transition-opacity" href="#">
+                            Read the Impact Report <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Bento Item 4 -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-sm">
+<img class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-700" data-alt="close up of a local Salvadoran farmer's weathered hands gently holding a bundle of golden maicillo stalks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVuT5JasxcLIFVGLcxgmp43y6PnzYzYO04qnULBCXVMKDG5Kmy5G7r9mBff1AiPb0duRQYRtkiPySwb_5QrD0xKlyTvn9hNqCoM-hHPoiiiIEpi81BbSmE3e8WltMu0zr5dOWVwzyiGpm0ZbAiDyKc446j0Fg05XoOSJ29zqJ1mvSetmqqh9Z7rYEVIgVMYJ8ww_DcHBBNr5-Om0IttCaf3vapuS3DFnTUQXba02xcyG7Q9QvH9-Av8ENGcnwdpwQeM-eJtAJIT8U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent flex items-end p-8">
+<p class="font-headline text-3xl font-black text-white italic">"We don't inherit the land from our ancestors; we borrow it from our children."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: The Artisanal Toast -->
+<section class="py-24 px-8 md:px-24 bg-surface">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 order-2 md:order-1">
+<span class="font-label text-xs font-bold tracking-widest text-secondary uppercase mb-4 block">The Alchemy</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">The Slow Transformation</h2>
+<p class="text-on-surface-variant text-lg font-light leading-relaxed mb-6">
+                        The secret lies in the heat. Unlike coffee beans which are often flash-roasted, Maicillo requires a patient, rhythmic toast. We use traditional clay ovens and open-air fires to caramelize the natural sugars within the grain.
+                    </p>
+<p class="text-on-surface-variant text-lg font-light leading-relaxed">
+                        This slow-roasting process creates the signature Sorro Brew profile: deep notes of toasted cacao, roasted walnut, and a subtle earthiness that lingers like a warm memory.
+                    </p>
+<div class="mt-10 flex gap-8">
+<div class="text-center">
+<span class="block text-3xl font-headline font-extrabold text-secondary">140°C</span>
+<span class="text-xs font-label uppercase tracking-widest text-outline">Precise Toast</span>
+</div>
+<div class="text-center">
+<span class="block text-3xl font-headline font-extrabold text-secondary">45m</span>
+<span class="text-xs font-label uppercase tracking-widest text-outline">Slow Roast</span>
+</div>
+</div>
+</div>
+<div class="flex-1 order-1 md:order-2">
+<div class="relative">
+<div class="absolute -right-8 -bottom-8 w-64 h-64 bg-surface-container-highest -z-10 rounded-sm"></div>
+<img class="w-full aspect-square object-cover rounded-sm shadow-xl grayscale-[20%]" data-alt="close up of maicillo grains being roasted in a large traditional cast-iron pan over glowing embers with subtle steam rising" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwtZxdae9pK_fm9Q1ByHU87CCBWh4GqwvhFb_NpZDKFHAaFgbiaVegjr5DfbOZPYeeb8atwXvRXkrm-KQYgxBnAMtL5MfNFO3hfPT5aarJOp0WgnzA0R1e3ECZdILa8363rAc2JOQz_pAQJ3JRA90JpZBtdH0MWxJO0pKdVQGwRZkHqKAAyv3eyXZtURUMABBonhKu5XRTrAvwSG0McU1FJWUHsqeAy9BqSF01SN9PLgZJEJfgTdURHcDS6y50bqSv6vWs5dYbkFw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: The Bridge -->
+<section class="py-24 bg-primary text-surface relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="abstract artistic overlay of map coordinates and traditional Salvadoran textile patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8J6WKbkLJ9snPARvPogzD4tuas9riH3W2Wp45Rb3Bdgyv9WuB32QNqCZFuwpDr_YFZeiePN_b3Cgx1KRkM5I49YtroSQgBhY_NnkzegC5XYtaX8Md0jMkrrghvTqy8qpr5hVuEYnVmecMYYJQP6R4zksdhqSfOVbUYNr9hUhg2F4-CmWxrq1dU_Gal-8qeaJa7DpKBBlg939U1IRCNG7qOmO4biXILQKk-mmXAJTkOyKhKCH8nM9EFTr4tJ6x8z8xui8TnT5g8CA"/>
+</div>
+<div class="max-w-4xl mx-auto px-8 relative z-10 text-center">
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold mb-10 tracking-tighter">Connecting Worlds</h2>
+<div class="space-y-8 text-on-primary-container text-xl font-light leading-relaxed">
+<p>Sorro Brew is the bridge between the volcanic slopes of Santa Ana and your morning ritual in the city. We aren't just bringing a beverage; we are carrying a piece of home.</p>
+<p>By choosing Maicillo, you are supporting a legacy that refused to be forgotten. You are fueling a movement that honors ancestry while embracing the modern palate.</p>
+</div>
+<div class="mt-16 p-12 bg-primary-container rounded-sm border border-outline/10 inline-block text-left w-full max-w-2xl">
+<div class="flex items-center gap-6 mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary-container">
+<img class="w-full h-full object-cover" data-alt="portrait of a confident Salvadoran artisan entrepreneur with a warm smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCikocv4-5dK40awW5REAMdcfK85-tmO9DQ2iwzcc36J0vTGl0c8zZdTfdkXF9inWoU7P8oBTltiReA0yPc5XmU58RKb8iB50c8kpFA2dzwrGyVEgBaVuVpQh2oqx7kd8-J1Cu9QzGbcfwwhNV7pUCghGqyO5AgfJCKbnt0oUv7vROO14rAjxrLKEeumSTQXrx4dHKSIqVk6oOP5W18nslrnuslZktocFBYyLa1wFse3k372SUA1A0FqwMohr2BL-6S6otPOBG21Nw"/>
+</div>
+<div>
+<p class="font-headline font-bold text-lg">Mateo Rivera</p>
+<p class="text-sm font-label text-secondary-container uppercase tracking-widest">Co-Founder, Sorro Brew</p>
+</div>
+</div>
+<p class="italic text-surface-dim font-light text-lg">"We wanted to share the flavor of our childhood with the world, but more importantly, we wanted to make sure the soil that gave it to us stays healthy forever."</p>
+</div>
+<div class="mt-20">
+<h3 class="font-headline text-2xl font-bold mb-8">Join the Ancestral Circle</h3>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<input class="px-6 py-4 bg-primary-container border-none text-surface focus:ring-2 focus:ring-secondary-container rounded-md w-full md:w-80 font-body" placeholder="Your email address" type="email"/>
+<button class="px-8 py-4 bg-secondary-container text-on-secondary-container font-headline font-bold rounded-md hover:bg-surface-bright transition-colors duration-300">Subscribe to the Journey</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-surface-variant flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-headline font-black uppercase tracking-widest text-primary text-xl">Sorro Brew</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body text-sm leading-relaxed text-primary-container hover:underline decoration-secondary-container decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Heritage</a>
+<a class="font-body text-sm leading-relaxed text-primary-container hover:underline decoration-secondary-container decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Sustainability</a>
+<a class="font-body text-sm leading-relaxed text-primary-container hover:underline decoration-secondary-container decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Global Trade</a>
+<a class="font-body text-sm leading-relaxed text-primary-container hover:underline decoration-secondary-container decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Privacy</a>
+</div>
+<div class="font-body text-sm leading-relaxed text-primary-container opacity-60">
+            &copy; 2024 Sorro Brew. The Elevated Ancestry.
+        </div>
+</footer>
+</body>
+<script src="../../navigation.js"></script>
+</html>

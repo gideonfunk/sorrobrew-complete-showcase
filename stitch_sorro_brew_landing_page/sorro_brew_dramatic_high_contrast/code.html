@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sorro Brew | The Ritual of the Dark Roast</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#0b1f1a",
+              "on-error-container": "#ffdad6",
+              "on-surface": "#ede0dc",
+              "tertiary-fixed": "#d0e8de",
+              "secondary-fixed": "#ffdad4",
+              "surface-bright": "#3f3835",
+              "primary-fixed": "#ffe088",
+              "inverse-surface": "#ede0dc",
+              "on-primary-fixed": "#241a00",
+              "primary": "#e9c349",
+              "on-secondary-fixed-variant": "#5b403c",
+              "tertiary-fixed-dim": "#b5ccc3",
+              "secondary-container": "#5b403c",
+              "secondary-fixed-dim": "#e3beb8",
+              "primary-container": "#382b00",
+              "on-primary-container": "#b39016",
+              "tertiary": "#b5ccc3",
+              "on-error": "#690005",
+              "background": "#181210",
+              "surface-container-high": "#2f2826",
+              "on-secondary": "#422a26",
+              "on-tertiary-container": "#839991",
+              "on-background": "#ede0dc",
+              "surface-dim": "#181210",
+              "surface-container-lowest": "#130d0b",
+              "error-container": "#93000a",
+              "surface-variant": "#3b3331",
+              "surface-container-highest": "#3b3331",
+              "on-secondary-fixed": "#2b1613",
+              "surface-tint": "#e9c349",
+              "inverse-on-surface": "#362f2c",
+              "on-tertiary": "#20342e",
+              "secondary": "#e3beb8",
+              "surface-container-low": "#201a18",
+              "outline-variant": "#504442",
+              "outline": "#9c8d8b",
+              "on-tertiary-fixed-variant": "#364b44",
+              "surface": "#181210",
+              "on-secondary-container": "#d1ada7",
+              "error": "#ffb4ab",
+              "surface-container": "#251e1c",
+              "on-primary-fixed-variant": "#574500",
+              "on-surface-variant": "#d3c3c0",
+              "on-primary": "#3c2f00",
+              "tertiary-container": "#1d312b",
+              "inverse-primary": "#735c00",
+              "primary-fixed-dim": "#e9c349"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(24, 18, 16, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .text-shadow-hero {
+        text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav shadow-[0_20px_40px_rgba(36,26,0,0.15)]">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#e9c349] uppercase font-headline">
+                Sorro Brew
+            </div>
+<div class="hidden md:flex items-center gap-10 font-headline tracking-tight font-bold uppercase text-sm">
+<a class="text-[#e9c349] border-b-2 border-[#e9c349] pb-1 transition-all duration-300" href="#">The Roast</a>
+<a class="text-white/80 hover:text-[#e9c349] transition-colors transition-all duration-300" href="#">Our Story</a>
+<a class="text-white/80 hover:text-[#e9c349] transition-colors transition-all duration-300" href="#">Brewing Ritual</a>
+<a class="text-white/80 hover:text-[#e9c349] transition-colors transition-all duration-300" href="#">Shop</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-white/80 hover:opacity-80 transition-all duration-300 scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="bg-primary text-on-primary-fixed px-6 py-2.5 font-headline font-bold uppercase text-xs tracking-widest hover:opacity-90 transition-all duration-300 scale-95 active:scale-90">
+                    Join the Ritual
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-height-[921px] flex items-center pt-24 pb-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero" class="w-full h-full object-cover opacity-40 brightness-75" data-alt="Close-up of dark roasted coffee beans with dramatic side lighting and rising steam in a moody low-key setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo_z-V2N2RJpldKZTA7Spt4PKzI2jXZZHGRvQt2zYOxejODk6mxgL4qs-W9ImykyLtiRxh3Xo5J6gTiCDCFG86VMQb2H6eTWD4g71qaCPAcFThvtZZIsW16cg4tCEKA8HLyZu-qgccSN4st2go11pjvc4fBtGVnvcnQpkADaxybPeh_YoTBK9NmfIo9zd_odP9asprYl45HGxl2vRNgd5tRYKh51REpem4VGHuo6Ft6VBX8g5z-Vq1wJ3C_cFCt2OJvAmIhC2bXDU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
+<div class="max-w-4xl">
+<span class="text-primary font-headline text-sm tracking-[0.3em] uppercase mb-6 block">The Awakening</span>
+<h1 class="font-headline text-6xl md:text-8xl lg:text-9xl text-on-surface leading-[0.9] tracking-tighter mb-8 text-shadow-hero">
+                        Break up with coffee, <br/>
+<span class="text-primary italic">not your morning</span>
+</h1>
+<p class="text-on-surface-variant text-xl md:text-2xl max-w-xl mb-12 font-medium leading-relaxed">
+                        Precision-roasted Salvadoran beans. A darker depth of flavor. A cleaner ritual for the nocturnal soul.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-primary text-on-primary-fixed px-10 py-5 font-headline font-black uppercase text-sm tracking-widest hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(233,195,73,0.2)]">
+                            Begin the Ritual
+                        </button>
+<button class="border border-outline-variant text-on-surface px-10 py-5 font-headline font-black uppercase text-sm tracking-widest hover:bg-surface-variant transition-colors duration-300">
+                            The Origins
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- The Collection (Product Cards) -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<span class="text-primary font-headline text-sm tracking-[0.3em] uppercase mb-4 block">The Vault</span>
+<h2 class="font-headline text-5xl md:text-6xl text-on-surface tracking-tighter uppercase">The Collection</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm font-medium">Curated roasts from high-altitude volcanic soils, hand-harvested and flame-licked for ultimate depth.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product 1 -->
+<div class="group bg-surface hover:bg-surface-container-highest transition-colors duration-500 overflow-hidden flex flex-col h-full">
+<div class="h-96 overflow-hidden">
+<img alt="Midnight Roast" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Matte black coffee bag standing on a dark stone surface with dramatic lighting and coffee grounds scattered around" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuGivDt3jicXwdhjEcGgm01WijhxbEME8nRgTymQM2YE75g5aaQCW21_nSvwPwwSxwMYG8VfAD9d9hxz8B1NgABQns7j6j4GMiWnFf2p6aRZL1xpgAtJ2eADvmDnjrnaf1TWcmtdZh-EuuVr3Yyb5MAw-K995u134vEoHkHrL2_qJ_QKvBbKvBdCxHx8VhOXWAfYmUhsGfopcGoaeSd-1Dcg39E7qWc5pOmIPnIA2Ut_zt05Ih1kxJ9Xzdq_JYiW4wEFEIQMtk_ck"/>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl uppercase tracking-tight">Midnight Velvet</h3>
+<span class="text-primary font-bold">$28</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 flex-grow">Deep cocoa notes with a smokey bourbon finish. Our signature heavy roast.</p>
+<button class="w-full py-4 border-b border-outline-variant font-headline font-bold uppercase text-xs tracking-widest hover:border-primary hover:text-primary transition-all duration-300">Add to Ritual</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group bg-surface hover:bg-surface-container-highest transition-colors duration-500 overflow-hidden flex flex-col h-full">
+<div class="h-96 overflow-hidden">
+<img alt="Volcano Roast" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Overhead view of coffee brewing in a ceramic v60 dripper with dark moody atmospheric steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBitBxdfQPsQ2D9Bgq7FcoAsh7QRB9U_DBW1bMBR4cpmtfCpj7lPg1dl4u7uRdpTXvP0Ew_KL8Zq0OshzwXxECxaa0x_FQQ0OfGTnPzHnvEB3xLL9MNQ-uIkkQZUPW5zNXHZj-i27owYsi9cK4ljVu6VHuY01iuSRSdP8G4-Jc8dbZ6dAo0eV0iSZIM1Hfalt55-Pc9q8UEvTrdDmTK1i9zjl5pfYfj5NLt-LExdm9YiaFtjg2YkvErtgpBPq_32nW0biTt9OQjsWE"/>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl uppercase tracking-tight">Volcanic Ember</h3>
+<span class="text-primary font-bold">$32</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 flex-grow">Rare beans from the Santa Ana volcanic slopes. High acidity meets charred fruit.</p>
+<button class="w-full py-4 border-b border-outline-variant font-headline font-bold uppercase text-xs tracking-widest hover:border-primary hover:text-primary transition-all duration-300">Add to Ritual</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group bg-surface hover:bg-surface-container-highest transition-colors duration-500 overflow-hidden flex flex-col h-full">
+<div class="h-96 overflow-hidden">
+<img alt="Solar Eclipse" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Artistic shot of espresso being poured into a small glass cup with thick crema and dark shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCByZsR9tLCUpG8sTHkFjfEZ1EX-6Qe4pPz1Pv5ehBhuTI-9sohTXWcDn4dxGoOJcjRSCNSVxzFOjyvxKLEQrXZr7yRUfVLjlIhWKh_LZzXe_Tj1zUkU4n2Slm7IRhlT6LJObWXzI0TAr3edXxSiPmluF4WaeVy42RtTBK2TWNCYDT41WHdye-7p9wrmGjZI7xK766dRyfMl_9Pxu0B8mcb2btsh2BXmCPNK_o77m4_5Be_xVe-CBTvtILgiSaf7d8yQWs8t2gIbk0"/>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl uppercase tracking-tight">Solar Eclipse</h3>
+<span class="text-primary font-bold">$24</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 flex-grow">Our smoothest dark blend. Caramelized sugars and toasted walnut undertones.</p>
+<button class="w-full py-4 border-b border-outline-variant font-headline font-bold uppercase text-xs tracking-widest hover:border-primary hover:text-primary transition-all duration-300">Add to Ritual</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Story Section -->
+<section class="relative py-40 overflow-hidden bg-background">
+<div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Harvesting" class="w-full h-full object-cover" data-alt="Dramatic low-key portrait of a coffee farmer in El Salvador with weathered hands holding coffee cherries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3VHAyuyc38tGTBep71OLgwz1KKT0NsebpQUDJkYBalvM8uHJ_xR4AF9Z_s2EQfX6YwrVc_3Zdg5HjWgaeqH5Wuq2dy7vUUKqGrmux6zL1F0HgOyWOS7FYrSlzp5ZLxL2zl7_JkCMGWlBUpvJg_JizOyr2FihtsyHuzwbuV71xR6KTLwLK5317UE7e8hHUAFtvoK3Z6ovgXD1DTlwSW6H2af_rK9QQCqmTIILKDQBZLq4bdZ2OJb18sm8WMXAjKXRqoIIAPACPxRE"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/10 blur-[100px] -z-10"></div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="text-primary font-headline text-sm tracking-[0.3em] uppercase mb-6 block">Legacy of the Hills</span>
+<h2 class="font-headline text-5xl md:text-7xl text-on-surface leading-[1.1] tracking-tighter mb-8 uppercase">From Salvadoran Hills <span class="text-primary italic">to Your Cup</span></h2>
+<p class="text-on-surface-variant text-xl leading-relaxed mb-10">
+                        In the high-altitude forests of El Salvador, the air is thin and the soil is rich. We partner with third-generation harvesters who treat every bean like a relic. It's not just farming; it's a stewardship of the earth's most potent energy.
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-6 items-start">
+<div class="text-primary pt-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">landscape</span>
+</div>
+<div>
+<h4 class="font-headline uppercase text-lg mb-1 tracking-tight">Altitudes of 1,800m</h4>
+<p class="text-on-surface-variant text-sm">Slower maturation creates unprecedented flavor density and complex sugar profiles.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="text-primary pt-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<h4 class="font-headline uppercase text-lg mb-1 tracking-tight">Regenerative Practice</h4>
+<p class="text-on-surface-variant text-sm">Returning more to the soil than we take. Our coffee nourishes the forest it inhabits.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Grid -->
+<section class="py-32 bg-surface-container-highest">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="text-center group">
+<div class="w-16 h-16 bg-primary-container text-primary flex items-center justify-center mx-auto mb-8 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-[0_0_30px_rgba(233,195,73,0.1)]">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="font-headline text-2xl uppercase mb-4 tracking-tighter">Sustained Burn</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-xs mx-auto">Zero jitters. Our precision roast method maximizes clean energy without the mid-day crash.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 bg-primary-container text-primary flex items-center justify-center mx-auto mb-8 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-[0_0_30px_rgba(233,195,73,0.1)]">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<h3 class="font-headline text-2xl uppercase mb-4 tracking-tighter">Liquid Gold</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-xs mx-auto">Non-alkaline process ensures low acidity, protecting your gut and enhancing the ritual.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 bg-primary-container text-primary flex items-center justify-center mx-auto mb-8 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-[0_0_30px_rgba(233,195,73,0.1)]">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</div>
+<h3 class="font-headline text-2xl uppercase mb-4 tracking-tighter">Ritual Sealed</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-xs mx-auto">Nitrogen-sealed in recyclable matte tins to preserve every aromatic nuance for 90 days.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-40 bg-background relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-8 text-center relative z-10">
+<h2 class="font-headline text-5xl md:text-7xl text-on-surface mb-8 tracking-tighter uppercase leading-none">Enter the Inner Circle</h2>
+<p class="text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto font-medium">Be the first to know about micro-batch drops and the lore behind the roast.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto" onsubmit="return false;">
+<input class="flex-grow bg-surface-container-highest border-b border-outline-variant px-6 py-4 text-on-surface focus:outline-none focus:border-primary transition-colors font-body" placeholder="ritual@email.com" type="email"/>
+<button class="bg-primary text-on-primary-fixed px-10 py-4 font-headline font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all">Summon</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#201a18] full-width py-20 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-[#e9c349] font-black italic text-2xl font-headline uppercase">
+                    Sorro Brew
+                </div>
+<p class="text-white/40 text-sm font-body tracking-wide">© 2024 Sorro Brew. Carved from the Earth.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Manrope'] text-sm tracking-wide">
+<a class="text-white/40 hover:text-white/90 transition-colors hover:text-[#e9c349]" href="#">Privacy</a>
+<a class="text-white/40 hover:text-white/90 transition-colors hover:text-[#e9c349]" href="#">Terms</a>
+<a class="text-white/40 hover:text-white/90 transition-colors hover:text-[#e9c349]" href="#">Wholesale</a>
+<a class="text-white/40 hover:text-white/90 transition-colors hover:text-[#e9c349]" href="#">Contact</a>
+</div>
+<div class="flex gap-6">
+<a class="text-white/40 hover:text-white/90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-white/40 hover:text-white/90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">brand_awareness</span>
+</a>
+</div>
+</div>
+</footer>
+</body>
+<script src="../../navigation.js"></script>
+</html>
